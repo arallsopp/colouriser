@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FormsModule } from "@angular/forms";
 import { SliderComponent } from './components/slider/slider.component';
 import { SwatchPickerComponent } from './components/swatch-picker/swatch-picker.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SwatchPickerComponent } from './components/swatch-picker/swatch-picker.
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

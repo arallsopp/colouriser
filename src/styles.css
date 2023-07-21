@@ -21,3 +21,6 @@
   mix-blend-mode: overlay;
   filter: sepia(100) hue-rotate(164deg) brightness(0.8) contrast(1.4) saturate(1) opacity(1);
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
