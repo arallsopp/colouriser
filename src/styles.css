@@ -1,9 +1,15 @@
 .canvas{
   position: relative;
+  width:100%;
+}
+.main{
+  width:100%;
 }
 .mask{
+  width:100%;
   position:absolute;
-  top:0;
+  top:10px;
+  left:0;
 }
 
 .colorised{
@@ -11,4 +17,5 @@
   mix-blend-mode: color;
   filter: hue-rotate(45deg);
   filter: brightness(585.5);
+  filter:sepia(10);
 }
