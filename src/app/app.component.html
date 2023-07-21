@@ -1,5 +1,3 @@
-Hello world
-
 <div class="canvas">
   <img class="main" src="assets/tr4a/background.jpg">
   <img *ngIf="metallic" class="mask colorised" [ngStyle] = "{
@@ -17,69 +15,51 @@ Hello world
       'deg) saturate(' + saturation + '%) contrast(' + contrast + '%) opacity(' + opacity + '%)'}"
        src="assets/tr4a/body-mask.png">
 </div>
-todo: create a card for the hood also,
-add a 'sync' button that keeps them together (just use a function to set body or hood, or both, I guess);
-<mat-accordion>
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Swatches
-      </mat-panel-title>
-      <mat-panel-description>
-        Pick a colour
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <div *ngFor="let swatch of swatches">
+
+ <div *ngFor="let swatch of swatches">
       <app-swatch-picker [swatch]="swatch" (click)="applyTemplate(swatch)" ></app-swatch-picker>
     </div>
 
 
-  </mat-expansion-panel>
 
-
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Custom
-      </mat-panel-title>
-      <mat-panel-description>
-        Roll your own
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <label>Brightness</label>:
-
+<div>
+    <label>Brightness</label>
     <mat-slider min="0" max="200" value="100" class="slider" >
       <input matSliderThumb [(ngModel)]="brightness">
     </mat-slider>
-    <input type="range" min="0" max="200" value="100" class="slider" [(ngModel)]="brightness">
-    {{brightness}}
+
     <br/>
-    <label>Sepia</label>:
-    <input type="range" min="0" max="100" value="100" class="slider" [(ngModel)]="sepia">
-    {{sepia}}
+    <label>Sepia</label>
+    <mat-slider min="0" max="100" value="100" class="slider" >
+      <input matSliderThumb [(ngModel)]="sepia">
+    </mat-slider>
+
     <br/>
-    <label>Hue</label>:
-    <input type="range" min="0" max="359" value="0" class="slider" [(ngModel)]="hue_rotate">
-    {{hue_rotate}}
+    <label>Hue</label>
+    <mat-slider min="0" max="359" value="0" class="slider">
+      <input matSliderThumb [(ngModel)]="hue_rotate">
+    </mat-slider>
     <br/>
+
     <label>Saturate</label>:
-    <input type="range" min="0" max="400" value="0" class="slider" [(ngModel)]="saturation">
-    {{saturation}}%
-    <br/>
+    <mat-slider min="0" max="400" value="0" class="slider">
+      <input matSliderThumb [(ngModel)]="saturation">
+    </mat-slider>
+      <br/>
     <label>Contrast</label>:
-    <input type="range" min="0" max="200" value="0" class="slider" [(ngModel)]="contrast">
-    {{contrast}}%
-    <br/>
+    <mat-slider min="0" max="200" value="0" class="slider">
+      <input matSliderThumb [(ngModel)]="contrast">
+    </mat-slider>
+      <br/>
     <label>Opacity</label>:
-    <input type="range" min="0" max="100" value="0" class="slider" [(ngModel)]="opacity">
-    {{opacity}}%
-    <br/>
+    <mat-slider min="0" max="100" value="0" class="slider">
+      <input matSliderThumb [(ngModel)]="opacity">
+    </mat-slider>
+      <br/>
     <label>Metallic</label>:
     <input type="checkbox" [(ngModel)]="metallic">
     {{metallic}}
     <br/>
     <p><mat-slide-toggle [(ngModel)]="metallic">Metallic</mat-slide-toggle>
     </p>
-  </mat-expansion-panel>
-</mat-accordion>
 
