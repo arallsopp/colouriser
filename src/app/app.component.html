@@ -18,6 +18,8 @@ Hello world
        src="assets/tr4a/body-mask.png">
 </div>
 
+<app-slider [min]="0" [max]="255" label="Brightness"></app-slider>
+
 <div class="slidecontainer">
   <label>Brightness</label>:
   <input type="range" min="0" max="200" value="100" class="slider" [(ngModel)]="brightness">
