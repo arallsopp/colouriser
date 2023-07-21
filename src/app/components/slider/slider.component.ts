@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-slider',
@@ -9,7 +9,10 @@ export class SliderComponent {
   @Input() max: number;
   @Input() min: number;
   @Input() label: string;
+  @Output() valueChange = new EventEmitter<number>();
+
   public value: number;
+
 
   constructor() {
     this.max = 100;
