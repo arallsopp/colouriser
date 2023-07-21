@@ -1,0 +1,9 @@
+.picker{
+  cursor: pointer;
+}
+.thumb{
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  vertical-align: center;
+}

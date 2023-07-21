@@ -10,7 +10,7 @@ export class AppComponent {
   public swatches: Swatch[] = [
     {
       name: 'wedgewood',
-      color: 'red',
+      color: '#99bdcc',
       brightness: 136,
       sepia: 100,
       hue_rotate: 165,
@@ -20,7 +20,7 @@ export class AppComponent {
       metallic: false
     },{
     name: 'red',
-      color: 'red',
+      color: '#820002',
       brightness: 52,
       sepia: 100,
       hue_rotate: 309,
@@ -30,7 +30,7 @@ export class AppComponent {
       metallic: false
     }, {
       name: 'yellow',
-      color: 'yellow',
+      color: '#ffc007',
       brightness: 122,
       sepia: 100,
       hue_rotate: 5,
