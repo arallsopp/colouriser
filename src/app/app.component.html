@@ -2,59 +2,54 @@ Hello world
 
 <div class="canvas">
   <img class="main" src="assets/tr4a/background.jpg">
-  <img *ngIf="body_metallic" class="mask colorised" [ngStyle] = "{
+  <img *ngIf="metallic" class="mask colorised" [ngStyle] = "{
       'mix-blend-mode':'color-burn',
       'filter': 'brightness(72%) contrast(80%) opacity(60%)'}"
        src="assets/tr4a/body-mask.png">
   <img class="mask colorised" [ngStyle]="{
       'mix-blend-mode':'multiply',
-      'filter': 'brightness(' + body_brightness + '%) sepia(' + body_sepia + ') hue-rotate(' + body_hue_rotate +
-      'deg) saturate(' + body_saturation + '%) contrast(' + body_contrast + '%) opacity(' + body_opacity + '%)'}"
+      'filter': 'brightness(' + brightness + '%) sepia(' + sepia + ') hue-rotate(' + hue_rotate +
+      'deg) saturate(' + saturation + '%) contrast(' + contrast + '%) opacity(' + opacity + '%)'}"
        src="assets/tr4a/roof-mask.png">
   <img class="mask colorised" [ngStyle]="{
       'mix-blend-mode':'multiply',
-      'filter': 'brightness(' + body_brightness + '%) sepia(' + body_sepia + ') hue-rotate(' + body_hue_rotate +
-      'deg) saturate(' + body_saturation + '%) contrast(' + body_contrast + '%) opacity(' + body_opacity + '%)'}"
+      'filter': 'brightness(' + brightness + '%) sepia(' + sepia + ') hue-rotate(' + hue_rotate +
+      'deg) saturate(' + saturation + '%) contrast(' + contrast + '%) opacity(' + opacity + '%)'}"
        src="assets/tr4a/body-mask.png">
 </div>
 
 <div class="slidecontainer">
   <label>Brightness</label>:
-  <input type="range" min="0" max="200" value="100" class="slider" [(ngModel)]="body_brightness">
-  {{body_brightness}}
+  <input type="range" min="0" max="200" value="100" class="slider" [(ngModel)]="brightness">
+  {{brightness}}
   <br/>
   <label>Sepia</label>:
-  <input type="range" min="0" max="100" value="100" class="slider" [(ngModel)]="body_sepia">
-  {{body_sepia}}
+  <input type="range" min="0" max="100" value="100" class="slider" [(ngModel)]="sepia">
+  {{sepia}}
   <br/>
   <label>Hue</label>:
-  <input type="range" min="0" max="359" value="0" class="slider" [(ngModel)]="body_hue_rotate">
-  {{body_hue_rotate}}
+  <input type="range" min="0" max="359" value="0" class="slider" [(ngModel)]="hue_rotate">
+  {{hue_rotate}}
   <br/>
   <label>Saturate</label>:
-  <input type="range" min="0" max="400" value="0" class="slider" [(ngModel)]="body_saturation">
-  {{body_saturation}}%
+  <input type="range" min="0" max="400" value="0" class="slider" [(ngModel)]="saturation">
+  {{saturation}}%
   <br/>
   <label>Contrast</label>:
-  <input type="range" min="0" max="200" value="0" class="slider" [(ngModel)]="body_contrast">
-  {{body_contrast}}%
+  <input type="range" min="0" max="200" value="0" class="slider" [(ngModel)]="contrast">
+  {{contrast}}%
   <br/>
   <label>Opacity</label>:
-  <input type="range" min="0" max="100" value="0" class="slider" [(ngModel)]="body_opacity">
-  {{body_opacity}}%
+  <input type="range" min="0" max="100" value="0" class="slider" [(ngModel)]="opacity">
+  {{opacity}}%
   <br/>
   <label>Metallic</label>:
-  <input type="checkbox" [(ngModel)]="body_metallic">
-  {{body_metallic}}
+  <input type="checkbox" [(ngModel)]="metallic">
+  {{metallic}}
   <br/>
 
-
-
-
-
-  <span (click)="applyTemplate('red');">RED</span>
-  <span (click)="applyTemplate('wedgewood');">Wedgewood</span>
- <span (click)="applyTemplate('yellow');">Yellow</span>
- <span (click)="applyTemplate('black');">Black</span>
+  <div *ngFor="let swatch of swatches">
+    <span (click)="applyTemplate(swatch)">{{swatch.name}}</span>
+  </div>
 
 </div>

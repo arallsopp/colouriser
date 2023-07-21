@@ -51,17 +51,24 @@ export class AppComponent {
 }
   ];
 
-
   title = 'colouriser';
-  public body_brightness: number = 136;
-  public body_sepia: number = 100
-  public body_hue_rotate: number = 165;
-  public body_saturation: number = 95;
-  public body_contrast: number = 100;
-  public body_opacity: number = 100;
-  public body_metallic: boolean = false;
 
-  applyTemplate(name: string){
+  public brightness: number = 136;
+  public sepia: number = 100
+  public hue_rotate: number = 165;
+  public saturation: number = 95;
+  public contrast: number = 100;
+  public opacity: number = 100;
+  public metallic: boolean = false;
+
+  applyTemplate(swatch: Swatch){
+    this.brightness = swatch.brightness;
+    this.sepia = swatch.sepia;
+    this.hue_rotate = swatch.hue_rotate;
+    this.saturation = swatch.saturation;
+    this.contrast = swatch.contrast;
+    this.opacity = swatch.opacity;
+    this.metallic = swatch.metallic;
 
   }
 }
