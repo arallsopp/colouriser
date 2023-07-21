@@ -11,11 +11,20 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatCardModule} from '@angular/material/card';
 import {MatSliderModule} from "@angular/material/slider";
 import {MatExpansionModule} from "@angular/material/expansion";
+import { NavigationComponent } from './navigation/navigation.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { VehicleComponent } from './components/vehicle/vehicle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SwatchPickerComponent
+    SwatchPickerComponent,
+    NavigationComponent,
+    VehicleComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +34,12 @@ import {MatExpansionModule} from "@angular/material/expansion";
     MatSlideToggleModule,
     MatCardModule,
     MatSliderModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
