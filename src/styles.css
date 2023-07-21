@@ -12,6 +12,9 @@
   left:0px;
 }
 
+.mat-mdc-slider{
+  width:300px;
+}
 .deprecated-colorised-with-svg {
   /* these are all trials */
   mix-blend-mode: multiply;

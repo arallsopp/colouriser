@@ -19,50 +19,67 @@ Hello world
 </div>
 todo: create a card for the hood also,
 add a 'sync' button that keeps them together (just use a function to set body or hood, or both, I guess);
-<mat-card>
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Body</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <div class="slidecontainer">
-      <label>Brightness</label>:
-
-      <mat-slider min="0" max="200" value="100" class="slider" >
-        <input matSliderThumb [(ngModel)]="brightness">
-      </mat-slider>
-      <input type="range" min="0" max="200" value="100" class="slider" [(ngModel)]="brightness">
-      {{brightness}}
-      <br/>
-      <label>Sepia</label>:
-      <input type="range" min="0" max="100" value="100" class="slider" [(ngModel)]="sepia">
-      {{sepia}}
-      <br/>
-      <label>Hue</label>:
-      <input type="range" min="0" max="359" value="0" class="slider" [(ngModel)]="hue_rotate">
-      {{hue_rotate}}
-      <br/>
-      <label>Saturate</label>:
-      <input type="range" min="0" max="400" value="0" class="slider" [(ngModel)]="saturation">
-      {{saturation}}%
-      <br/>
-      <label>Contrast</label>:
-      <input type="range" min="0" max="200" value="0" class="slider" [(ngModel)]="contrast">
-      {{contrast}}%
-      <br/>
-      <label>Opacity</label>:
-      <input type="range" min="0" max="100" value="0" class="slider" [(ngModel)]="opacity">
-      {{opacity}}%
-      <br/>
-      <label>Metallic</label>:
-      <input type="checkbox" [(ngModel)]="metallic">
-      {{metallic}}
-      <br/>
-      <p><mat-slide-toggle [(ngModel)]="metallic">Metallic</mat-slide-toggle>
-      </p>
-      <div *ngFor="let swatch of swatches">
-        <app-swatch-picker [swatch]="swatch" (click)="applyTemplate(swatch)" ></app-swatch-picker>
-      </div>
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Swatches
+      </mat-panel-title>
+      <mat-panel-description>
+        Pick a colour
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div *ngFor="let swatch of swatches">
+      <app-swatch-picker [swatch]="swatch" (click)="applyTemplate(swatch)" ></app-swatch-picker>
     </div>
-  </mat-card-content>
-</mat-card>
+
+
+  </mat-expansion-panel>
+
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Custom
+      </mat-panel-title>
+      <mat-panel-description>
+        Roll your own
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <label>Brightness</label>:
+
+    <mat-slider min="0" max="200" value="100" class="slider" >
+      <input matSliderThumb [(ngModel)]="brightness">
+    </mat-slider>
+    <input type="range" min="0" max="200" value="100" class="slider" [(ngModel)]="brightness">
+    {{brightness}}
+    <br/>
+    <label>Sepia</label>:
+    <input type="range" min="0" max="100" value="100" class="slider" [(ngModel)]="sepia">
+    {{sepia}}
+    <br/>
+    <label>Hue</label>:
+    <input type="range" min="0" max="359" value="0" class="slider" [(ngModel)]="hue_rotate">
+    {{hue_rotate}}
+    <br/>
+    <label>Saturate</label>:
+    <input type="range" min="0" max="400" value="0" class="slider" [(ngModel)]="saturation">
+    {{saturation}}%
+    <br/>
+    <label>Contrast</label>:
+    <input type="range" min="0" max="200" value="0" class="slider" [(ngModel)]="contrast">
+    {{contrast}}%
+    <br/>
+    <label>Opacity</label>:
+    <input type="range" min="0" max="100" value="0" class="slider" [(ngModel)]="opacity">
+    {{opacity}}%
+    <br/>
+    <label>Metallic</label>:
+    <input type="checkbox" [(ngModel)]="metallic">
+    {{metallic}}
+    <br/>
+    <p><mat-slide-toggle [(ngModel)]="metallic">Metallic</mat-slide-toggle>
+    </p>
+  </mat-expansion-panel>
+</mat-accordion>
+
