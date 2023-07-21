@@ -4,10 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from "@angular/forms";
+import { SliderComponent } from './components/slider/slider.component';
+import { SwatchPickerComponent } from './components/swatch-picker/swatch-picker.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SliderComponent,
+    SwatchPickerComponent
   ],
   imports: [
     BrowserModule,
