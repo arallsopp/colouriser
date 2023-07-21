@@ -2,21 +2,47 @@ Hello world
 
 <div class="canvas">
   <img class="main" src="assets/tr4a/background.jpg">
-  <!--<img class="mask colorised" src="assets/tr4a/mask.svg">-->
   <img class="mask colorised" [ngStyle]="{
       'mix-blend-mode':'multiply',
-      'filter': 'brightness(' + body_brightness + '%) sepia(' + body_sepia + ')'}"
+      'filter': 'brightness(' + body_brightness + '%) sepia(' + body_sepia + ') hue-rotate(' + body_hue_rotate +
+      'deg) saturate(' + body_saturation + '%) contrast(' + body_contrast + '%) opacity(' + body_opacity + '%)'}"
        src="assets/tr4a/roof-mask.png">
   <img class="mask colorised" [ngStyle]="{
       'mix-blend-mode':'multiply',
-      'filter': 'brightness(' + body_brightness + '%) sepia(' + body_sepia + ')'}"
+      'filter': 'brightness(' + body_brightness + '%) sepia(' + body_sepia + ') hue-rotate(' + body_hue_rotate +
+      'deg) saturate(' + body_saturation + '%) contrast(' + body_contrast + '%) opacity(' + body_opacity + '%)'}"
        src="assets/tr4a/body-mask.png">
 </div>
 
 <div class="slidecontainer">
-  <label>Brightness</label>
+  <label>Brightness</label>:
   <input type="range" min="0" max="200" value="100" class="slider" [(ngModel)]="body_brightness">
   {{body_brightness}}
+  <br/>
+  <label>Sepia</label>:
   <input type="range" min="0" max="100" value="100" class="slider" [(ngModel)]="body_sepia">
   {{body_sepia}}
+  <br/>
+  <label>Hue</label>:
+  <input type="range" min="0" max="359" value="0" class="slider" [(ngModel)]="body_hue_rotate">
+  {{body_hue_rotate}}
+  <br/>
+  <label>Saturate</label>:
+  <input type="range" min="0" max="400" value="0" class="slider" [(ngModel)]="body_saturation">
+  {{body_saturation}}%
+  <br/>
+  <label>Contrast</label>:
+  <input type="range" min="0" max="200" value="0" class="slider" [(ngModel)]="body_contrast">
+  {{body_contrast}}%
+  <br/>
+  <label>Opacity</label>:
+  <input type="range" min="0" max="100" value="0" class="slider" [(ngModel)]="body_opacity">
+  {{body_opacity}}%
+  <br/>
+
+  <span (click)="applyTemplate('red');">RED</span>
+  <span (click)="applyTemplate('wedgewood');">Wedgewood</span>
+ <span (click)="applyTemplate('yellow');">Yellow</span>
+ <span (click)="applyTemplate('black');">Black</span>
+
 </div>
