@@ -2,6 +2,10 @@ Hello world
 
 <div class="canvas">
   <img class="main" src="assets/tr4a/background.jpg">
+  <img *ngIf="body_metallic" class="mask colorised" [ngStyle] = "{
+      'mix-blend-mode':'color-burn',
+      'filter': 'brightness(72%) contrast(80%) opacity(60%)'}"
+       src="assets/tr4a/body-mask.png">
   <img class="mask colorised" [ngStyle]="{
       'mix-blend-mode':'multiply',
       'filter': 'brightness(' + body_brightness + '%) sepia(' + body_sepia + ') hue-rotate(' + body_hue_rotate +
@@ -39,6 +43,14 @@ Hello world
   <input type="range" min="0" max="100" value="0" class="slider" [(ngModel)]="body_opacity">
   {{body_opacity}}%
   <br/>
+  <label>Metallic</label>:
+  <input type="checkbox" [(ngModel)]="body_metallic">
+  {{body_metallic}}
+  <br/>
+
+
+
+
 
   <span (click)="applyTemplate('red');">RED</span>
   <span (click)="applyTemplate('wedgewood');">Wedgewood</span>

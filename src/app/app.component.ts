@@ -13,7 +13,7 @@ export class AppComponent {
   public body_saturation: number = 95;
   public body_contrast: number = 100;
   public body_opacity: number = 100;
-
+  public body_metallic: boolean = false;
 
   applyTemplate(name: string){
     switch(name){
@@ -24,6 +24,7 @@ export class AppComponent {
         this.body_saturation = 95;
         this.body_contrast = 100;
         this.body_opacity = 100;
+        this.body_metallic = false;
         break;
       case 'red':
         this.body_brightness = 52;
@@ -32,6 +33,7 @@ export class AppComponent {
         this.body_saturation = 357;
         this.body_contrast = 168;
         this.body_opacity = 100;
+        this.body_metallic = false;
         break;
       case 'yellow':
         this.body_brightness = 122;
@@ -40,6 +42,7 @@ export class AppComponent {
         this.body_saturation = 237;
         this.body_contrast = 126;
         this.body_opacity = 100;
+        this.body_metallic = false;
         break;
       case 'black':
         this.body_brightness = 21;
@@ -48,6 +51,7 @@ export class AppComponent {
         this.body_saturation = 1;
         this.body_contrast = 106;
         this.body_opacity = 100;
+        this.body_metallic = false;
         break;
     }
   }
