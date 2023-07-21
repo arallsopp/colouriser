@@ -49,6 +49,7 @@ Hello world
   <br/>
 
   <div *ngFor="let swatch of swatches">
+    <app-swatch-picker [swatch]="swatch" ></app-swatch-picker>
     <span (click)="applyTemplate(swatch)">{{swatch.name}}</span>
   </div>
 
