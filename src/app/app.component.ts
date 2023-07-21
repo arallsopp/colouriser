@@ -7,9 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'colouriser';
-  public body_brightness: number = 100;
+  public body_brightness: number = 69;
+  public body_sepia: number = 0;
 
-  getBodyStyle(): string{
-    return 'mix-blend-mode: multiply; font-weight: ' + this.body_brightness + '; filter: brightness: ' + (this.body_brightness) + '%'
-  }
+
 }

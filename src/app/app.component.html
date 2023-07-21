@@ -5,17 +5,18 @@ Hello world
   <!--<img class="mask colorised" src="assets/tr4a/mask.svg">-->
   <img class="mask colorised" [ngStyle]="{
       'mix-blend-mode':'multiply',
-      'filter': 'brightness(' + body_brightness + '%)'}"
+      'filter': 'brightness(' + body_brightness + '%) sepia(' + body_sepia + ')'}"
        src="assets/tr4a/roof-mask.png">
   <img class="mask colorised" [ngStyle]="{
       'mix-blend-mode':'multiply',
-      'filter': 'brightness(' + body_brightness + '%)'}"
+      'filter': 'brightness(' + body_brightness + '%) sepia(' + body_sepia + ')'}"
        src="assets/tr4a/body-mask.png">
 </div>
 
 <div class="slidecontainer">
   <label>Brightness</label>
-  <input type="range" min="0" max="200" value="100" class="slider" [(ngModel)]="body_brightness" id="brightness">
+  <input type="range" min="0" max="200" value="100" class="slider" [(ngModel)]="body_brightness">
   {{body_brightness}}
-  <pre>style: {{getBodyStyle()}}</pre>
+  <input type="range" min="0" max="100" value="100" class="slider" [(ngModel)]="body_sepia">
+  {{body_sepia}}
 </div>
