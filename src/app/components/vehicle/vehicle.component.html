@@ -16,9 +16,11 @@
        src="assets/tr4a/body-mask.png">
 </div>
 
-<div *ngFor="let swatch of swatches">
-  <app-swatch-picker [swatch]="swatch" (click)="applyTemplate(swatch)" ></app-swatch-picker>
-</div>
+
+<mat-action-list>
+  <button mat-list-item *ngFor="let swatch of swatches" (click)="applyTemplate(swatch)">
+    <div class="thumb" style="background:{{swatch.color}}"></div>{{swatch.name}}</button>
+</mat-action-list>
 
 
 

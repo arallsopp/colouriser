@@ -24,3 +24,14 @@
   mix-blend-mode: overlay;
   filter: sepia(100) hue-rotate(164deg) brightness(0.8) contrast(1.4) saturate(1) opacity(1);
 }
+
+
+.thumb{
+  display: inline-block;
+  border-radius:50%;
+  width: 18px;
+  height: 18px;
+  border:2px solid white;
+  vertical-align: bottom;
+  margin-right:10px;
+}

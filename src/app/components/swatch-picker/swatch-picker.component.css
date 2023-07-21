@@ -1,11 +1,4 @@
-.picker{
-  cursor: pointer;
-  border:2px solid white;
-  background: black;
-  padding:5px;
-  color:white;
-  width:auto
-}
+
 .thumb{
   display: inline-block;
   width: 15px;
