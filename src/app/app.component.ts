@@ -48,7 +48,17 @@ export class AppComponent {
     contrast: 106,
     opacity: 100,
     metallic: false
-}
+},{
+      name: 'brg',
+      color: '#062a02',
+      brightness: 48,
+      sepia: 100,
+      hue_rotate: 45,
+      saturation: 123,
+      contrast: 182,
+      opacity: 100,
+      metallic: true
+    }
   ];
 
   title = 'colouriser';

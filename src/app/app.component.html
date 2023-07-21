@@ -17,7 +17,8 @@ Hello world
       'deg) saturate(' + saturation + '%) contrast(' + contrast + '%) opacity(' + opacity + '%)'}"
        src="assets/tr4a/body-mask.png">
 </div>
-
+todo: create a card for the hood also,
+add a 'sync' button that keeps them together (just use a function to set body or hood, or both, I guess);
 <mat-card>
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
@@ -26,6 +27,10 @@ Hello world
   <mat-card-content>
     <div class="slidecontainer">
       <label>Brightness</label>:
+
+      <mat-slider min="0" max="200" value="100" class="slider" >
+        <input matSliderThumb [(ngModel)]="brightness">
+      </mat-slider>
       <input type="range" min="0" max="200" value="100" class="slider" [(ngModel)]="brightness">
       {{brightness}}
       <br/>
