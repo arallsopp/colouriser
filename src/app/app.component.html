@@ -1,8 +1,15 @@
 Hello world
 
 <div class="canvas">
-<img class="main" src="assets/tr4a/background.jpg">
-<img class="mask colorised" src="assets/tr4a/mask.svg">
-<!--<img class="mask colorised" src="assets/tr4a/body-mask.png">
-<img class="mask colorised" src="assets/tr4a/body-mask.png">-->
+  <img class="main" src="assets/tr4a/background.jpg">
+  <!--<img class="mask colorised" src="assets/tr4a/mask.svg">-->
+  <img class="mask colorised" [style]='getBodyStyle()' src="assets/tr4a/roof-mask.png">
+  <img class="mask colorised" [style]='getBodyStyle()' src="assets/tr4a/body-mask.png">
+</div>
+
+<div class="slidecontainer">
+  <label>Brightness</label>
+  <input type="range" min="0" max="200" value="100" class="slider" [(ngModel)]="body_brightness" id="brightness">
+  {{body_brightness}}
+  <pre>style: {{getBodyStyle()}}</pre>
 </div>
