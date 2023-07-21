@@ -8,6 +8,9 @@ import { SliderComponent } from './components/slider/slider.component';
 import { SwatchPickerComponent } from './components/swatch-picker/swatch-picker.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

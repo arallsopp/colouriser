@@ -49,6 +49,7 @@ Hello world
   <input type="checkbox" [(ngModel)]="metallic">
   {{metallic}}
   <br/>
+  <mat-slide-toggle [(ngModel)]="metallic">Metallic</mat-slide-toggle>
 
   <div *ngFor="let swatch of swatches">
     <app-swatch-picker [swatch]="swatch" (click)="applyTemplate(swatch)" ></app-swatch-picker>
