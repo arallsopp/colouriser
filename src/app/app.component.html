@@ -18,41 +18,46 @@ Hello world
        src="assets/tr4a/body-mask.png">
 </div>
 
-<app-slider [min]="0" [max]="255" label="Brightness"></app-slider>
+<mat-card>
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Body</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="slidecontainer">
+      <label>Brightness</label>:
+      <input type="range" min="0" max="200" value="100" class="slider" [(ngModel)]="brightness">
+      {{brightness}}
+      <br/>
+      <label>Sepia</label>:
+      <input type="range" min="0" max="100" value="100" class="slider" [(ngModel)]="sepia">
+      {{sepia}}
+      <br/>
+      <label>Hue</label>:
+      <input type="range" min="0" max="359" value="0" class="slider" [(ngModel)]="hue_rotate">
+      {{hue_rotate}}
+      <br/>
+      <label>Saturate</label>:
+      <input type="range" min="0" max="400" value="0" class="slider" [(ngModel)]="saturation">
+      {{saturation}}%
+      <br/>
+      <label>Contrast</label>:
+      <input type="range" min="0" max="200" value="0" class="slider" [(ngModel)]="contrast">
+      {{contrast}}%
+      <br/>
+      <label>Opacity</label>:
+      <input type="range" min="0" max="100" value="0" class="slider" [(ngModel)]="opacity">
+      {{opacity}}%
+      <br/>
+      <label>Metallic</label>:
+      <input type="checkbox" [(ngModel)]="metallic">
+      {{metallic}}
+      <br/>
+      <mat-slide-toggle [(ngModel)]="metallic">Metallic</mat-slide-toggle>
 
-<div class="slidecontainer">
-  <label>Brightness</label>:
-  <input type="range" min="0" max="200" value="100" class="slider" [(ngModel)]="brightness">
-  {{brightness}}
-  <br/>
-  <label>Sepia</label>:
-  <input type="range" min="0" max="100" value="100" class="slider" [(ngModel)]="sepia">
-  {{sepia}}
-  <br/>
-  <label>Hue</label>:
-  <input type="range" min="0" max="359" value="0" class="slider" [(ngModel)]="hue_rotate">
-  {{hue_rotate}}
-  <br/>
-  <label>Saturate</label>:
-  <input type="range" min="0" max="400" value="0" class="slider" [(ngModel)]="saturation">
-  {{saturation}}%
-  <br/>
-  <label>Contrast</label>:
-  <input type="range" min="0" max="200" value="0" class="slider" [(ngModel)]="contrast">
-  {{contrast}}%
-  <br/>
-  <label>Opacity</label>:
-  <input type="range" min="0" max="100" value="0" class="slider" [(ngModel)]="opacity">
-  {{opacity}}%
-  <br/>
-  <label>Metallic</label>:
-  <input type="checkbox" [(ngModel)]="metallic">
-  {{metallic}}
-  <br/>
-  <mat-slide-toggle [(ngModel)]="metallic">Metallic</mat-slide-toggle>
-
-  <div *ngFor="let swatch of swatches">
-    <app-swatch-picker [swatch]="swatch" (click)="applyTemplate(swatch)" ></app-swatch-picker>
-  </div>
-
-</div>
+      <div *ngFor="let swatch of swatches">
+        <app-swatch-picker [swatch]="swatch" (click)="applyTemplate(swatch)" ></app-swatch-picker>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
