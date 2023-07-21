@@ -15,5 +15,5 @@
 .colorised{
   /* these are all trials */
   mix-blend-mode: multiply;
-  filter: sepia(100) hue-rotate(0deg) brightness(0.5) contrast(0.5) saturate(0.5) opacity(0.5);
+  filter: sepia(1000) hue-rotate(166deg) brightness(1.4) contrast(1) saturate(1.2) opacity(1); /* wedgewood */
 }
