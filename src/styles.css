@@ -8,14 +8,12 @@
 .mask{
   width:100%;
   position:absolute;
-  top:10px;
-  left:0;
+  top:0;
+  left:1px;
 }
 
 .colorised{
   /* these are all trials */
-  mix-blend-mode: color;
-  filter: hue-rotate(45deg);
-  filter: brightness(585.5);
-  filter:sepia(10);
+  mix-blend-mode: multiply;
+  filter: sepia(100) hue-rotate(0deg) brightness(0.5) contrast(0.5) saturate(0.5) opacity(0.5);
 }
