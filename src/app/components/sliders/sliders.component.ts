@@ -61,6 +61,8 @@ export class SlidersComponent {
     }
   ];
 
+  @Input() title: string = 'Title';
+
   @Input() part: Palette = {
     brightness: 136,
     sepia: 100,
