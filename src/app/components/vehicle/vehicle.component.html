@@ -4,10 +4,14 @@
       'mix-blend-mode':'color-burn',
       'filter': 'brightness(72%) contrast(80%) opacity(60%)'}"
        src="assets/tr4a/body-mask.png">
+  <img *ngIf="hood.metallic" class="mask colorised" [ngStyle] = "{
+      'mix-blend-mode':'color-burn',
+      'filter': 'brightness(72%) contrast(80%) opacity(60%)'}"
+       src="assets/tr4a/roof-mask.png">
   <img class="mask colorised" [ngStyle]="{
       'mix-blend-mode':'multiply',
-      'filter': 'brightness(' + body.brightness + '%) sepia(' + body.sepia + ') hue-rotate(' + body.hue_rotate +
-      'deg) saturate(' + body.saturation + '%) contrast(' + body.contrast + '%) opacity(' + body.opacity + '%)'}"
+      'filter': 'brightness(' + hood.brightness + '%) sepia(' + hood.sepia + ') hue-rotate(' + hood.hue_rotate +
+      'deg) saturate(' + hood.saturation + '%) contrast(' + hood.contrast + '%) opacity(' + hood.opacity + '%)'}"
        src="assets/tr4a/roof-mask.png">
   <img class="mask colorised" [ngStyle]="{
       'mix-blend-mode':'multiply',
