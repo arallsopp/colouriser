@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Swatch} from "../../types/swatch";
+import {Swatch, Palette} from "../../types/swatch";
 
 @Component({
   selector: 'app-vehicle',
@@ -63,22 +63,36 @@ export class VehicleComponent {
 
   title = 'colouriser';
 
-  public brightness: number = 136;
-  public sepia: number = 100
-  public hue_rotate: number = 165;
-  public saturation: number = 95;
-  public contrast: number = 100;
-  public opacity: number = 100;
-  public metallic: boolean = false;
+  public body: Palette = {
+      brightness: 136,
+      sepia: 100,
+      hue_rotate: 165,
+      saturation: 95,
+      contrast: 100,
+      opacity:  100,
+      metallic: false
+  };
+
+  public hood: Palette = {
+    brightness: 136,
+    sepia: 100,
+    hue_rotate: 165,
+    saturation : 95,
+    contrast: 100,
+    opacity:  100,
+    metallic: false
+  };
+
+  //todo: now create a sliders component that will bind to hood or body
 
   applyTemplate(swatch: Swatch){
-    this.brightness = swatch.brightness;
-    this.sepia = swatch.sepia;
-    this.hue_rotate = swatch.hue_rotate;
-    this.saturation = swatch.saturation;
-    this.contrast = swatch.contrast;
-    this.opacity = swatch.opacity;
-    this.metallic = swatch.metallic;
+    this.body.brightness = swatch.brightness;
+    this.body.sepia = swatch.sepia;
+    this.body.hue_rotate = swatch.hue_rotate;
+    this.body.saturation = swatch.saturation;
+    this.body.contrast = swatch.contrast;
+    this.body.opacity = swatch.opacity;
+    this.body.metallic = swatch.metallic;
 
   }
 }

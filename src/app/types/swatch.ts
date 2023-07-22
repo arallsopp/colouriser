@@ -10,4 +10,12 @@ export interface Swatch {
   metallic: boolean
 }
 
-
+export interface Palette {
+  brightness: number,
+  sepia: number,
+  hue_rotate: number,
+  saturation: number,
+  contrast: number,
+  opacity: number,
+  metallic: boolean
+}

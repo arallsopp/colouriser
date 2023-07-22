@@ -1,18 +1,18 @@
 <div class="canvas">
   <img class="main" src="assets/tr4a/background.jpg">
-  <img *ngIf="metallic" class="mask colorised" [ngStyle] = "{
+  <img *ngIf="body.metallic" class="mask colorised" [ngStyle] = "{
       'mix-blend-mode':'color-burn',
       'filter': 'brightness(72%) contrast(80%) opacity(60%)'}"
        src="assets/tr4a/body-mask.png">
   <img class="mask colorised" [ngStyle]="{
       'mix-blend-mode':'multiply',
-      'filter': 'brightness(' + brightness + '%) sepia(' + sepia + ') hue-rotate(' + hue_rotate +
-      'deg) saturate(' + saturation + '%) contrast(' + contrast + '%) opacity(' + opacity + '%)'}"
+      'filter': 'brightness(' + body.brightness + '%) sepia(' + body.sepia + ') hue-rotate(' + body.hue_rotate +
+      'deg) saturate(' + body.saturation + '%) contrast(' + body.contrast + '%) opacity(' + body.opacity + '%)'}"
        src="assets/tr4a/roof-mask.png">
   <img class="mask colorised" [ngStyle]="{
       'mix-blend-mode':'multiply',
-      'filter': 'brightness(' + brightness + '%) sepia(' + sepia + ') hue-rotate(' + hue_rotate +
-      'deg) saturate(' + saturation + '%) contrast(' + contrast + '%) opacity(' + opacity + '%)'}"
+      'filter': 'brightness(' + body.brightness + '%) sepia(' + body.sepia + ') hue-rotate(' + body.hue_rotate +
+      'deg) saturate(' + body.saturation + '%) contrast(' + body.contrast + '%) opacity(' + body.opacity + '%)'}"
        src="assets/tr4a/body-mask.png">
 </div>
 
@@ -31,42 +31,42 @@
     <mat-list-item>
       <label>Brightness</label>
       <mat-slider min="0" max="200" value="100" class="slider" >
-        <input matSliderThumb [(ngModel)]="brightness">
+        <input matSliderThumb [(ngModel)]="body.brightness">
       </mat-slider>
     </mat-list-item>
     <mat-list-item>
       <label>Sepia</label>
       <mat-slider min="0" max="100" value="100" class="slider" >
-        <input matSliderThumb [(ngModel)]="sepia">
+        <input matSliderThumb [(ngModel)]="body.sepia">
       </mat-slider>
     </mat-list-item>
     <mat-list-item>
     <label>Hue</label>
     <mat-slider min="0" max="359" value="0" class="slider">
-      <input matSliderThumb [(ngModel)]="hue_rotate">
+      <input matSliderThumb [(ngModel)]="body.hue_rotate">
     </mat-slider>
     </mat-list-item>
     <mat-list-item>
       <label>Saturate</label>
     <mat-slider min="0" max="400" value="0" class="slider">
-      <input matSliderThumb [(ngModel)]="saturation">
+      <input matSliderThumb [(ngModel)]="body.saturation">
     </mat-slider>
     </mat-list-item>
     <mat-list-item>
       <label>Contrast</label>
     <mat-slider min="0" max="200" value="0" class="slider">
-      <input matSliderThumb [(ngModel)]="contrast">
+      <input matSliderThumb [(ngModel)]="body.contrast">
     </mat-slider>
     </mat-list-item>
     <mat-list-item>
       <label>Opacity</label>
     <mat-slider min="0" max="100" value="0" class="slider">
-      <input matSliderThumb [(ngModel)]="opacity">
+      <input matSliderThumb [(ngModel)]="body.opacity">
     </mat-slider>
     </mat-list-item>
     <mat-list-item>
       <label>Metallic</label>
-      <mat-slide-toggle [(ngModel)]="metallic"></mat-slide-toggle>
+      <mat-slide-toggle [(ngModel)]="body.metallic"></mat-slide-toggle>
     </mat-list-item>
   </mat-list>
   </div>
