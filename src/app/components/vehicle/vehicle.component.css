@@ -12,9 +12,7 @@
   left:0px;
 }
 
-.mat-mdc-slider{
-  width:300px;
-}
+
 .deprecated-colorised-with-svg {
   /* these are all trials */
   mix-blend-mode: multiply;
@@ -34,4 +32,9 @@
   border:2px solid white;
   vertical-align: bottom;
   margin-right:10px;
+}
+
+.mat-mdc-list-item label{
+  min-width:90px;
+  display: inline-block;
 }

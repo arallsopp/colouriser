@@ -17,50 +17,52 @@
 </div>
 
 
+
 <mat-action-list>
   <button mat-list-item *ngFor="let swatch of swatches" (click)="applyTemplate(swatch)">
     <div class="thumb" style="background:{{swatch.color}}"></div>{{swatch.name}}</button>
 </mat-action-list>
 
-
-
-
-  <label>Brightness</label>
-  <mat-slider min="0" max="200" value="100" class="slider" >
-    <input matSliderThumb [(ngModel)]="brightness">
-  </mat-slider>
-<br/>
-  <label>Sepia</label>
-  <mat-slider min="0" max="100" value="100" class="slider" >
-    <input matSliderThumb [(ngModel)]="sepia">
-  </mat-slider>
-
-  <br/>
+<mat-list>
+  <mat-list-item class="fx-layout-row">
+    <label class="fx-flex">Brightness</label>
+    <mat-slider class="fx-flex-grow"  min="0" max="200" value="100" class="slider" >
+      <input matSliderThumb [(ngModel)]="brightness">
+    </mat-slider>
+  </mat-list-item>
+  <mat-list-item>
+    <label>Sepia</label>
+    <mat-slider min="0" max="100" value="100" class="slider" >
+      <input matSliderThumb [(ngModel)]="sepia">
+    </mat-slider>
+  </mat-list-item>
+  <mat-list-item>
   <label>Hue</label>
   <mat-slider min="0" max="359" value="0" class="slider">
     <input matSliderThumb [(ngModel)]="hue_rotate">
   </mat-slider>
-  <br/>
-
-  <label>Saturate</label>:
+  </mat-list-item>
+  <mat-list-item>
+    <label>Saturate</label>
   <mat-slider min="0" max="400" value="0" class="slider">
     <input matSliderThumb [(ngModel)]="saturation">
   </mat-slider>
-  <br/>
-  <label>Contrast</label>:
+  </mat-list-item>
+  <mat-list-item>
+    <label>Contrast</label>
   <mat-slider min="0" max="200" value="0" class="slider">
     <input matSliderThumb [(ngModel)]="contrast">
   </mat-slider>
-  <br/>
-  <label>Opacity</label>:
+  </mat-list-item>
+  <mat-list-item>
+    <label>Opacity</label>
   <mat-slider min="0" max="100" value="0" class="slider">
     <input matSliderThumb [(ngModel)]="opacity">
   </mat-slider>
-  <br/>
-  <label>Metallic</label>:
-  <input type="checkbox" [(ngModel)]="metallic">
-  {{metallic}}
-  <br/>
-  <p><mat-slide-toggle [(ngModel)]="metallic">Metallic</mat-slide-toggle>
-  </p>
+  </mat-list-item>
+  <mat-list-item>
+    <label>Metallic</label>
+    <mat-slide-toggle [(ngModel)]="metallic"></mat-slide-toggle>
+  </mat-list-item>
+</mat-list>
 
