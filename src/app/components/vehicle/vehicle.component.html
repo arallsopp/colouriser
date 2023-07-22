@@ -16,11 +16,8 @@
        src="assets/tr4a/body-mask.png">
 </div>
 
-<div class="responsive-two-columns">
-  <div>
-    bib</div>
-  <div>bodo</div>
-</div><div><div>
+
+<div>
   <mat-action-list>
     <button mat-list-item *ngFor="let swatch of swatches" (click)="applyTemplate(swatch)">
       <div class="thumb" style="background:{{swatch.color}}"></div>{{swatch.name}}</button>
@@ -70,4 +67,4 @@
     </mat-list-item>
   </mat-list>
   </div>
-</div>
+
