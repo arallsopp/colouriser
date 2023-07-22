@@ -16,53 +16,58 @@
        src="assets/tr4a/body-mask.png">
 </div>
 
-
-
-<mat-action-list>
-  <button mat-list-item *ngFor="let swatch of swatches" (click)="applyTemplate(swatch)">
-    <div class="thumb" style="background:{{swatch.color}}"></div>{{swatch.name}}</button>
-</mat-action-list>
-
-<mat-list>
-  <mat-list-item class="fx-layout-row">
-    <label class="fx-flex">Brightness</label>
-    <mat-slider class="fx-flex-grow"  min="0" max="200" value="100" class="slider" >
-      <input matSliderThumb [(ngModel)]="brightness">
+<div class="responsive-two-columns">
+  <div>
+    bib</div>
+  <div>bodo</div>
+</div><div><div>
+  <mat-action-list>
+    <button mat-list-item *ngFor="let swatch of swatches" (click)="applyTemplate(swatch)">
+      <div class="thumb" style="background:{{swatch.color}}"></div>{{swatch.name}}</button>
+  </mat-action-list>
+  </div>
+  <div>
+  <mat-list>
+    <mat-list-item>
+      <label>Brightness</label>
+      <mat-slider min="0" max="200" value="100" class="slider" >
+        <input matSliderThumb [(ngModel)]="brightness">
+      </mat-slider>
+    </mat-list-item>
+    <mat-list-item>
+      <label>Sepia</label>
+      <mat-slider min="0" max="100" value="100" class="slider" >
+        <input matSliderThumb [(ngModel)]="sepia">
+      </mat-slider>
+    </mat-list-item>
+    <mat-list-item>
+    <label>Hue</label>
+    <mat-slider min="0" max="359" value="0" class="slider">
+      <input matSliderThumb [(ngModel)]="hue_rotate">
     </mat-slider>
-  </mat-list-item>
-  <mat-list-item>
-    <label>Sepia</label>
-    <mat-slider min="0" max="100" value="100" class="slider" >
-      <input matSliderThumb [(ngModel)]="sepia">
+    </mat-list-item>
+    <mat-list-item>
+      <label>Saturate</label>
+    <mat-slider min="0" max="400" value="0" class="slider">
+      <input matSliderThumb [(ngModel)]="saturation">
     </mat-slider>
-  </mat-list-item>
-  <mat-list-item>
-  <label>Hue</label>
-  <mat-slider min="0" max="359" value="0" class="slider">
-    <input matSliderThumb [(ngModel)]="hue_rotate">
-  </mat-slider>
-  </mat-list-item>
-  <mat-list-item>
-    <label>Saturate</label>
-  <mat-slider min="0" max="400" value="0" class="slider">
-    <input matSliderThumb [(ngModel)]="saturation">
-  </mat-slider>
-  </mat-list-item>
-  <mat-list-item>
-    <label>Contrast</label>
-  <mat-slider min="0" max="200" value="0" class="slider">
-    <input matSliderThumb [(ngModel)]="contrast">
-  </mat-slider>
-  </mat-list-item>
-  <mat-list-item>
-    <label>Opacity</label>
-  <mat-slider min="0" max="100" value="0" class="slider">
-    <input matSliderThumb [(ngModel)]="opacity">
-  </mat-slider>
-  </mat-list-item>
-  <mat-list-item>
-    <label>Metallic</label>
-    <mat-slide-toggle [(ngModel)]="metallic"></mat-slide-toggle>
-  </mat-list-item>
-</mat-list>
-
+    </mat-list-item>
+    <mat-list-item>
+      <label>Contrast</label>
+    <mat-slider min="0" max="200" value="0" class="slider">
+      <input matSliderThumb [(ngModel)]="contrast">
+    </mat-slider>
+    </mat-list-item>
+    <mat-list-item>
+      <label>Opacity</label>
+    <mat-slider min="0" max="100" value="0" class="slider">
+      <input matSliderThumb [(ngModel)]="opacity">
+    </mat-slider>
+    </mat-list-item>
+    <mat-list-item>
+      <label>Metallic</label>
+      <mat-slide-toggle [(ngModel)]="metallic"></mat-slide-toggle>
+    </mat-list-item>
+  </mat-list>
+  </div>
+</div>
