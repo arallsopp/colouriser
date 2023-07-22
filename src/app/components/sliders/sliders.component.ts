@@ -49,13 +49,23 @@ export class SlidersComponent {
       opacity: 100,
       metallic: false
     },{
-      name: 'British Racing Green',
+      name: 'B R G',
       color: '#062a02',
       brightness: 48,
       sepia: 100,
       hue_rotate: 45,
       saturation: 123,
       contrast: 182,
+      opacity: 100,
+      metallic: true
+    },{
+      name: 'Valencia',
+      color: '#022a2c',
+      brightness: 43,
+      sepia: 100,
+      hue_rotate: 143,
+      saturation: 244,
+      contrast: 116,
       opacity: 100,
       metallic: true
     },{
