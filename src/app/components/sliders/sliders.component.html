@@ -1,0 +1,51 @@
+<div>
+  <mat-action-list>
+    <button mat-list-item *ngFor="let swatch of swatches" (click)="applyTemplate(swatch)">
+      <div class="thumb" style="background:{{swatch.color}}"></div>{{swatch.name}}</button>
+  </mat-action-list>
+</div>
+{{part | json}}
+<div>
+  <mat-list>
+    <mat-list-item>
+      <label>Brightness</label>
+      <mat-slider min="0" max="200" value="100" class="slider" >
+        <input matSliderThumb [(ngModel)]="part.brightness">
+      </mat-slider>
+    </mat-list-item>
+    <mat-list-item>
+      <label>Sepia</label>
+      <mat-slider min="0" max="100" value="100" class="slider" >
+        <input matSliderThumb [(ngModel)]="part.sepia">
+      </mat-slider>
+    </mat-list-item>
+    <mat-list-item>
+      <label>Hue</label>
+      <mat-slider min="0" max="359" value="0" class="slider">
+        <input matSliderThumb [(ngModel)]="part.hue_rotate">
+      </mat-slider>
+    </mat-list-item>
+    <mat-list-item>
+      <label>Saturate</label>
+      <mat-slider min="0" max="400" value="0" class="slider">
+        <input matSliderThumb [(ngModel)]="part.saturation" >
+      </mat-slider>
+    </mat-list-item>
+    <mat-list-item>
+      <label>Contrast</label>
+      <mat-slider min="0" max="200" value="0" class="slider">
+        <input matSliderThumb [(ngModel)]="part.contrast" >
+      </mat-slider>
+    </mat-list-item>
+    <mat-list-item>
+      <label>Opacity</label>
+      <mat-slider min="0" max="100" value="0" class="slider">
+        <input matSliderThumb [(ngModel)]="part.opacity" >
+      </mat-slider>
+    </mat-list-item>
+    <mat-list-item>
+      <label>Metallic</label>
+      <mat-slide-toggle [(ngModel)]="part.metallic"></mat-slide-toggle>
+    </mat-list-item>
+  </mat-list>
+</div>

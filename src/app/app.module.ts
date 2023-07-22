@@ -18,13 +18,15 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { VehicleComponent } from './components/vehicle/vehicle.component';
+import { SlidersComponent } from './components/sliders/sliders.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SwatchPickerComponent,
     NavigationComponent,
-    VehicleComponent
+    VehicleComponent,
+    SlidersComponent
   ],
   imports: [
     BrowserModule,
