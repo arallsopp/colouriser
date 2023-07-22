@@ -8,37 +8,37 @@
 <div>
   <mat-list>
     <mat-list-item>
-      <label>Brightness</label>
+      <label>Brightness {{part.brightness}}</label>
       <mat-slider min="0" max="200" value="100" class="slider" >
         <input matSliderThumb [(ngModel)]="part.brightness">
       </mat-slider>
     </mat-list-item>
     <mat-list-item>
-      <label>Sepia</label>
+      <label>Sepia {{part.sepia}}</label>
       <mat-slider min="0" max="100" value="100" class="slider" >
         <input matSliderThumb [(ngModel)]="part.sepia">
       </mat-slider>
     </mat-list-item>
     <mat-list-item>
-      <label>Hue</label>
+      <label>Hue {{part.hue_rotate}}</label>
       <mat-slider min="0" max="359" value="0" class="slider">
         <input matSliderThumb [(ngModel)]="part.hue_rotate">
       </mat-slider>
     </mat-list-item>
     <mat-list-item>
-      <label>Saturate</label>
+      <label>Saturate {{part.saturation}}</label>
       <mat-slider min="0" max="400" value="0" class="slider">
         <input matSliderThumb [(ngModel)]="part.saturation" >
       </mat-slider>
     </mat-list-item>
     <mat-list-item>
-      <label>Contrast</label>
+      <label>Contrast {{part.contrast}}</label>
       <mat-slider min="0" max="200" value="0" class="slider">
         <input matSliderThumb [(ngModel)]="part.contrast" >
       </mat-slider>
     </mat-list-item>
     <mat-list-item>
-      <label>Opacity</label>
+      <label>Opacity {{part.opacity}}</label>
       <mat-slider min="0" max="100" value="0" class="slider">
         <input matSliderThumb [(ngModel)]="part.opacity" >
       </mat-slider>

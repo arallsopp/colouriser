@@ -9,7 +9,7 @@ import {Palette, Swatch} from "../../types/swatch";
 export class SlidersComponent {
   public swatches: Swatch[] = [
     {
-      name: 'wedgewood',
+      name: 'Wedgewood',
       color: '#99bdcc',
       brightness: 136,
       sepia: 100,
@@ -19,7 +19,7 @@ export class SlidersComponent {
       opacity: 100,
       metallic: false
     },{
-      name: 'red',
+      name: 'Red',
       color: '#820002',
       brightness: 52,
       sepia: 100,
@@ -29,7 +29,7 @@ export class SlidersComponent {
       opacity: 100,
       metallic: false
     }, {
-      name: 'yellow',
+      name: 'Yellow',
       color: '#ffc007',
       brightness: 122,
       sepia: 100,
@@ -39,7 +39,7 @@ export class SlidersComponent {
       opacity: 100,
       metallic: false
     },{
-      name: 'black',
+      name: 'Black',
       color: '#000',
       brightness: 21,
       sepia: 100,
@@ -49,7 +49,7 @@ export class SlidersComponent {
       opacity: 100,
       metallic: false
     },{
-      name: 'brg',
+      name: 'British Racing Green',
       color: '#062a02',
       brightness: 48,
       sepia: 100,
@@ -58,6 +58,16 @@ export class SlidersComponent {
       contrast: 182,
       opacity: 100,
       metallic: true
+    },{
+      name: 'White',
+      color: '#f0f2ee',
+      brightness: 48,
+      sepia: 100,
+      hue_rotate: 0,
+      saturation: 0,
+      contrast: 0,
+      opacity: 0,
+      metallic: false
     }
   ];
 
