@@ -1,15 +1,13 @@
 <div class="canvas">
   <img class="main" src="assets/tr4a/background.jpg">
-  <img class="mask colorised" [ngStyle]="{
-      'filter': 'brightness(' + hood.brightness + '%) hue-rotate(' + hood.hue_rotate +
-      'deg) saturate(' + hood.saturation + '%) contrast(' + hood.contrast + '%) opacity(' + hood.opacity + '%)'}"
+  <img class="mask colorised" [style.filter]="getFilterStyle(hood) | safe"
        src="assets/tr4a/roof-mask-red.png">
-  <img class="mask colorised" [ngStyle]="{
-      'filter': 'brightness(' + body.brightness + '%)  hue-rotate(' + body.hue_rotate +
-      'deg) saturate(' + body.saturation + '%) contrast(' + body.contrast + '%) opacity(' + body.opacity + '%)'}"
+  <img class="mask colorised" [style.filter]="getFilterStyle(body) | safe"
        src="assets/tr4a/body-mask-red.png">
 </div>
+{{ getFilterStyle(body) }}
 <div>
+
 <app-sliders [part]="body" title="Body"></app-sliders>
 <app-sliders [part]="hood" title="Roof"></app-sliders>
 </div>

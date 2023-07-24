@@ -19,6 +19,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
+
+import { SafePipe} from "./pipes/safe.pipe";
 import { VehicleComponent } from './components/vehicle/vehicle.component';
 import { SlidersComponent } from './components/sliders/sliders.component';
 
@@ -28,7 +30,8 @@ import { SlidersComponent } from './components/sliders/sliders.component';
     SwatchPickerComponent,
     NavigationComponent,
     VehicleComponent,
-    SlidersComponent
+    SlidersComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,
