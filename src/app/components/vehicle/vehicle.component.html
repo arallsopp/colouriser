@@ -5,9 +5,26 @@
   <img class="mask colorised" [style.filter]="getFilterStyle(body) | safe"
        src="assets/tr4a/body-mask-red.png">
 </div>
-{{ getFilterStyle(body) }}
-<div>
 
-<app-sliders [part]="body" title="Body"></app-sliders>
-<app-sliders [part]="hood" title="Roof"></app-sliders>
+<div style="display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;">
+  <mat-card style="display: flex;
+                   flex-direction: column;
+                   flex-basis: 100%;
+                   flex: 1;">
+    <mat-card-content>
+      <app-sliders [part]="body" title="Body"></app-sliders>
+    </mat-card-content>
+  </mat-card>
+  <mat-card style="display: flex;
+                   flex-direction: column;
+                   flex-basis: 100%;
+                   flex: 1;">
+    <mat-card-content>
+      <app-sliders [part]="hood" title="Roof"></app-sliders>
+    </mat-card-content>
+  </mat-card>
 </div>
