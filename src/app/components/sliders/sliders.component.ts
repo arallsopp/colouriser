@@ -11,73 +11,59 @@ export class SlidersComponent {
     {
       name: 'Wedgewood',
       color: '#99bdcc',
-      brightness: 136,
-      sepia: 100,
-      hue_rotate: 165,
-      saturation: 95,
-      contrast: 100,
-      opacity: 100,
-      metallic: false
+      brightness: 127,
+      hue_rotate: 199,
+      saturation: 203,
+      contrast: 87,
+      opacity: 31
     },{
       name: 'Red',
       color: '#820002',
-      brightness: 52,
-      sepia: 100,
-      hue_rotate: 309,
-      saturation: 357,
-      contrast: 168,
-      opacity: 100,
-      metallic: false
+      brightness: 72,
+      hue_rotate: 0,
+      saturation: 80,
+      contrast: 149,
+      opacity: 100
     }, {
       name: 'Yellow',
       color: '#ffc007',
-      brightness: 122,
-      sepia: 100,
-      hue_rotate: 5,
-      saturation: 237,
-      contrast: 126,
-      opacity: 100,
-      metallic: false
+      brightness: 173,
+      hue_rotate: 59,
+      saturation: 298,
+      contrast: 146,
+      opacity: 79
     },{
       name: 'Black',
       color: '#000',
-      brightness: 21,
-      sepia: 100,
-      hue_rotate: 359,
-      saturation: 1,
-      contrast: 106,
-      opacity: 100,
-      metallic: false
+      brightness: 84,
+      hue_rotate: 76,
+      saturation: 0,
+      contrast: 200,
+      opacity: 100
     },{
       name: 'B R G',
       color: '#062a02',
-      brightness: 48,
-      sepia: 100,
-      hue_rotate: 45,
-      saturation: 123,
-      contrast: 182,
-      opacity: 100,
-      metallic: true
+      brightness: 63,
+      hue_rotate: 76,
+      saturation: 80,
+      contrast: 149,
+      opacity: 100
     },{
       name: 'Valencia',
       color: '#022a2c',
-      brightness: 43,
-      sepia: 100,
-      hue_rotate: 143,
-      saturation: 244,
-      contrast: 116,
-      opacity: 100,
-      metallic: true
+      brightness: 47,
+      hue_rotate: 177,
+      saturation: 216,
+      contrast: 136,
+      opacity: 100
     },{
       name: 'White',
       color: '#f0f2ee',
-      brightness: 48,
-      sepia: 100,
-      hue_rotate: 0,
-      saturation: 0,
-      contrast: 0,
-      opacity: 0,
-      metallic: false
+      brightness: 127,
+      hue_rotate: 199,
+      saturation: 203,
+      contrast: 87,
+      opacity: 0
     }
   ];
 
@@ -85,31 +71,25 @@ export class SlidersComponent {
 
   @Input() part: Palette = {
     brightness: 136,
-    sepia: 100,
     hue_rotate: 165,
     saturation: 95,
     contrast: 100,
-    opacity:  100,
-    metallic: false
+    opacity:  100
   };
 
   constructor(){
       this.part.brightness = 136;
-      this.part.sepia = 100;
       this.part.hue_rotate = 165;
       this.part.saturation = 95;
       this.part.contrast = 100;
       this.part.opacity = 100;
-      this.part.metallic = false;
   };
 
   applyTemplate(swatch: Swatch){
     this.part.brightness = swatch.brightness;
-    this.part.sepia = swatch.sepia;
     this.part.hue_rotate = swatch.hue_rotate;
     this.part.saturation = swatch.saturation;
     this.part.contrast = swatch.contrast;
     this.part.opacity = swatch.opacity;
-    this.part.metallic = swatch.metallic;
   }
 }

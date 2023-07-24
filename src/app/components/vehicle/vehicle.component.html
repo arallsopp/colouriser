@@ -1,23 +1,13 @@
 <div class="canvas">
   <img class="main" src="assets/tr4a/background.jpg">
-  <img *ngIf="body.metallic" class="mask colorised" [ngStyle] = "{
-      'mix-blend-mode':'color-burn',
-      'filter': 'brightness(72%) contrast(80%) opacity(60%)'}"
-       src="assets/tr4a/body-mask.png">
-  <img *ngIf="hood.metallic" class="mask colorised" [ngStyle] = "{
-      'mix-blend-mode':'color-burn',
-      'filter': 'brightness(72%) contrast(80%) opacity(60%)'}"
-       src="assets/tr4a/roof-mask.png">
   <img class="mask colorised" [ngStyle]="{
-      'mix-blend-mode':'multiply',
-      'filter': 'brightness(' + hood.brightness + '%) sepia(' + hood.sepia + ') hue-rotate(' + hood.hue_rotate +
+      'filter': 'brightness(' + hood.brightness + '%) hue-rotate(' + hood.hue_rotate +
       'deg) saturate(' + hood.saturation + '%) contrast(' + hood.contrast + '%) opacity(' + hood.opacity + '%)'}"
-       src="assets/tr4a/roof-mask.png">
+       src="assets/tr4a/roof-mask-red.png">
   <img class="mask colorised" [ngStyle]="{
-      'mix-blend-mode':'multiply',
-      'filter': 'brightness(' + body.brightness + '%) sepia(' + body.sepia + ') hue-rotate(' + body.hue_rotate +
+      'filter': 'brightness(' + body.brightness + '%)  hue-rotate(' + body.hue_rotate +
       'deg) saturate(' + body.saturation + '%) contrast(' + body.contrast + '%) opacity(' + body.opacity + '%)'}"
-       src="assets/tr4a/body-mask.png">
+       src="assets/tr4a/body-mask-red.png">
 </div>
 <div>
 <app-sliders [part]="body" title="Body"></app-sliders>

@@ -11,23 +11,19 @@ export class VehicleComponent {
   title = 'colouriser';
 
   public body: Palette = {
-      brightness: 136,
-      sepia: 100,
-      hue_rotate: 165,
-      saturation: 95,
-      contrast: 100,
-      opacity:  100,
-      metallic: false
+      brightness: 127,
+      hue_rotate: 199,
+      saturation: 146,
+      contrast: 87,
+      opacity:  31
   };
 
   public hood: Palette = {
-    brightness: 136,
-    sepia: 100,
-    hue_rotate: 165,
-    saturation : 95,
-    contrast: 100,
-    opacity:  100,
-    metallic: false
+    brightness: 127,
+    hue_rotate: 199,
+    saturation: 146,
+    contrast: 87,
+    opacity:  31
   };
 
 
