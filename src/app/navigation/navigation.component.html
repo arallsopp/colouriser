@@ -3,12 +3,16 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
-    </mat-nav-list>
+    <mat-toolbar>About</mat-toolbar>
+    <div class="p-3 pt-0">
+      <p>This is a quick tool built out on a retina iMac. You may find your machine renders colours differently.</p>
+      <p>All colours vary between screens, so ignore the presets if they're nonsense.</p>
+      <h2 class="pt-4">How to use</h2>
+      <p>Set the sliders wherever gets you the effect you want.</p>
+      <p>Use the buttons to copy from body to roof or vice-versa.</p>
+      <p>Print screen your favourites.</p>
+    </div>
+
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
