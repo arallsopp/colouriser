@@ -6,25 +6,13 @@
        src="assets/tr4a/body-mask-red.png">
 </div>
 
-<div style="display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  gap: 10px;">
-  <mat-card style="display: flex;
-                   flex-direction: column;
-                   flex-basis: 100%;
-                   flex: 1;">
-    <mat-card-content>
-      <app-sliders [part]="body" title="Body"></app-sliders>
-    </mat-card-content>
-  </mat-card>
-  <mat-card style="display: flex;
-                   flex-direction: column;
-                   flex-basis: 100%;
-                   flex: 1;">
-    <mat-card-content>
-      <app-sliders [part]="hood" title="Roof"></app-sliders>
-    </mat-card-content>
-  </mat-card>
+<div class="container">
+  <div class="row mt-3">
+    <div class="col-12 col-md-6">
+      <app-sliders class="card bg-dark text-white p-3" [part]="body" title="Body"></app-sliders>
+    </div>
+    <div class="col-12 col-md-6">
+      <app-sliders class="card bg-dark text-white p-3" [part]="hood" title="Roof"></app-sliders>
+    </div>
+  </div>
 </div>
