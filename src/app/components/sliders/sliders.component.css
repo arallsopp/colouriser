@@ -1,4 +1,7 @@
 
+.slider{
+  width: calc(100% - 140px);
+}
 
 .thumb{
   display: inline-block;
