@@ -1,14 +1,5 @@
 <div>
   <h2>{{title}}</h2>
-  <mat-form-field>
-    <mat-label>Preset</mat-label>
-    <mat-select>
-      <mat-option *ngFor="let swatch of swatches" (click)="applyTemplate(swatch)" [value]="swatch.name">
-        <div class="thumb" style="background:{{ swatch.color }}"></div>{{swatch.name}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-
 </div>
 <div>
   <mat-list>
@@ -44,3 +35,11 @@
     </mat-list-item>
   </mat-list>
 </div>
+<mat-form-field>
+  <mat-label>Preset</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let swatch of swatches" (click)="applyTemplate(swatch)" [value]="swatch.name">
+      <div class="thumb" style="background:{{ swatch.color }}"></div>{{swatch.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

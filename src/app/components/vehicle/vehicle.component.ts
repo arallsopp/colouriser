@@ -39,4 +39,8 @@ export class VehicleComponent {
     console.log('filter is', filter);
     return filter;
   }
+
+  copy(source:Palette, target:Palette): void{
+    Object.assign(target,source);
+  }
 }
