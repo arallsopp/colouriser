@@ -1,6 +1,7 @@
 <div>
   <h2>{{title}}
     <button type="button" class="btn btn-primary float-end"
+            [class]="title == 'Body' ? 'right-down' : 'left-up'"
             (click)="copyPalette()">{{sendCaption}}</button></h2>
 </div>
 <div>
