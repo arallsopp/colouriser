@@ -14,13 +14,3 @@
   left:0px;
 }
 
-
-.deprecated-colorised-with-svg {
-  /* these are all trials */
-  mix-blend-mode: multiply;
-  filter: sepia(1000) hue-rotate(166deg) brightness(1.4) contrast(1) saturate(1.2) opacity(1); /* wedgewood for svg */
-}
-.deprecated-colorised{
-  mix-blend-mode: overlay;
-  filter: sepia(100) hue-rotate(164deg) brightness(0.8) contrast(1.4) saturate(1) opacity(1);
-}

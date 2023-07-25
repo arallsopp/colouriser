@@ -68,6 +68,7 @@ export class SlidersComponent {
   ];
 
   @Input() title: string = 'Title';
+  @Input() sendCaption: string = 'Copy';
 
   @Input() part: Palette = {
     brightness: 136,

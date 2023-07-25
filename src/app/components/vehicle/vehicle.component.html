@@ -9,17 +9,18 @@
 <div class="container">
   <div class="row mt-3">
     <div class="col-12 col-md-6">
-      <span (click)="copy(body,hood)">-></span>
       <app-sliders class="card bg-dark text-white p-3"
                    [part]="body"
                    (sendPalette)="copy(body,hood)"
+                   sendCaption="Copy to Roof"
                    title="Body"></app-sliders>
+
     </div>
     <div class="col-12 col-md-6">
-      <span (click)="copy(hood,body)"><-</span>
       <app-sliders class="card bg-dark text-white p-3"
                    [part]="hood"
                    (sendPalette)="copy(hood,body)"
+                   sendCaption="Copy to Body"
                    title="Roof"></app-sliders>
     </div>
   </div>
