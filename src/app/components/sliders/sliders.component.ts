@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, Output,EventEmitter} from '@angular/core';
 import {Palette, Swatch} from "../../types/swatch";
 
 @Component({
@@ -77,6 +77,8 @@ export class SlidersComponent {
     opacity:  100
   };
 
+  @Output() sendPalette: EventEmitter<Palette> = new EventEmitter<Palette>()
+
   constructor(){
       this.part.brightness = 136;
       this.part.hue_rotate = 165;
@@ -91,5 +93,9 @@ export class SlidersComponent {
     this.part.saturation = swatch.saturation;
     this.part.contrast = swatch.contrast;
     this.part.opacity = swatch.opacity;
+  }
+
+  copyPalette(){
+    this.sendPalette.emit(this.part);
   }
 }

@@ -10,11 +10,17 @@
   <div class="row mt-3">
     <div class="col-12 col-md-6">
       <span (click)="copy(body,hood)">-></span>
-      <app-sliders class="card bg-dark text-white p-3" [part]="body" title="Body"></app-sliders>
+      <app-sliders class="card bg-dark text-white p-3"
+                   [part]="body"
+                   (sendPalette)="copy(body,hood)"
+                   title="Body"></app-sliders>
     </div>
     <div class="col-12 col-md-6">
       <span (click)="copy(hood,body)"><-</span>
-      <app-sliders class="card bg-dark text-white p-3" [part]="hood" title="Roof"></app-sliders>
+      <app-sliders class="card bg-dark text-white p-3"
+                   [part]="hood"
+                   (sendPalette)="copy(hood,body)"
+                   title="Roof"></app-sliders>
     </div>
   </div>
 </div>
