@@ -6,11 +6,21 @@
 }
 .main{
   width:100%;
-}
-.mask{
-  width:100%;
   position:absolute;
+  left:0;
   top:0;
-  left:0px;
 }
 
+#mask{
+  position: relative;
+  z-index: 2;
+  mix-blend-mode: multiply;
+}
+
+#roof{
+  fill: #DBED64;
+}
+
+#body{
+  fill: #DBED64;
+}

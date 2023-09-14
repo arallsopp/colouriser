@@ -13,34 +13,7 @@ import { DomSanitizer } from "@angular/platform-browser";
 export class VehicleComponent {
 
   title = 'colouriser';
+  roofColour = '#DBED64';
+  bodyColour = '#DBED64';
 
-  public body: Palette = {
-      brightness: 127,
-      hue_rotate: 199,
-      saturation: 146,
-      contrast: 87,
-      opacity:  31
-  };
-
-  public hood: Palette = {
-    brightness: 127,
-    hue_rotate: 199,
-    saturation: 146,
-    contrast: 87,
-    opacity:  31
-  };
-
-  getFilterStyle(part: Palette): string{
-    let filter: string = 'brightness(' + part.brightness + '%) ' +
-                 'hue-rotate(' + part.hue_rotate + 'deg) ' +
-                 'saturate(' + part.saturation + '%) ' +
-                 'contrast(' + part.contrast + '%) ' +
-                 'opacity(' + part.opacity + '%)';
-    console.log('filter is', filter);
-    return filter;
-  }
-
-  copy(source:Palette, target:Palette): void{
-    Object.assign(target,source);
-  }
 }
