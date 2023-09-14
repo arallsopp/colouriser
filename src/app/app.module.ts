@@ -17,8 +17,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import {MatSelectModule} from '@angular/material/select';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { SafePipe} from "./pipes/safe.pipe";
 import { VehicleComponent } from './components/vehicle/vehicle.component';
@@ -52,5 +52,6 @@ import { SlidersComponent } from './components/sliders/sliders.component';
   ],
   providers: [],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }
