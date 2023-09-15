@@ -48,6 +48,7 @@
 
 
 <input type="color" [(ngModel)]="roofColour">
+<mat-slide-toggle [(ngModel)]="sync">Slide Toggle Checked: {{sync ? 'yes' : 'no'}}</mat-slide-toggle>
 <input type="color" [(ngModel)]="bodyColour">
 <input type="range" min = "0" max="100" [(ngModel)]="sheen">
 xx {{getBrightness()}} xx

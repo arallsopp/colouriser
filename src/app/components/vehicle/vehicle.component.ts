@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+
 
 
 
@@ -12,6 +14,7 @@ export class VehicleComponent {
   title:string = 'colouriser';
   roofColour:string = '#DBED64';
   bodyColour:string = '#DBED64';
+  sync:boolean = true;
   sheen:number = 0;
   brightness:number = 0;
 
