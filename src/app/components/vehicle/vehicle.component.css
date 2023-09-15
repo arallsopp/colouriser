@@ -12,8 +12,13 @@
   z-index:1;
 }
 .shine{
+  /* need to find a way to make it lighten rather than darken the image
+     its not filter invert
+   */
   width:100%;
   position:absolute;
+  mix-blend-mode: luminosity;
+  opacity: 1;
   left:0;
   top:0;
   z-index:2;
