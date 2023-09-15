@@ -33,12 +33,14 @@ export class VehicleComponent {
       this.brightness = 0;
     }
 
-    let cutoff = 128;
-    if(this.brightness < cutoff){
-      this.sheen =((cutoff - this.brightness)/(255-cutoff)) * 33;
+    if(this.brightness < 128){
+      this.sheen =((128 - this.brightness)/128) * 33;
     }else {
-      this.sheen = 0;
+      this.sheen = 0.1;
     }
     return this.brightness;
+
+    //ideally, we work out if its very saturated, and if it is we set the blend mode to color-dodge instead.
+    //perhaps thats another layer.
   }
 }
