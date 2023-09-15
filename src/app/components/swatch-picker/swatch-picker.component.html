@@ -1,5 +1,7 @@
 <div class="picker">
-  <div class="thumb" style="background:{{swatch?.color}}"></div>
-  {{swatch?.name}}
+  <div  *ngFor="let paint of palette">
+  <div class="thumb" [style.background] = "paint.color"></div>
+  {{paint.name}}
+  </div>
 </div>
 

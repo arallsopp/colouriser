@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import {Swatch} from "../../types/swatch";
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-swatch-picker',
@@ -7,5 +7,13 @@ import {Swatch} from "../../types/swatch";
   styleUrls: ['./swatch-picker.component.css']
 })
 export class SwatchPickerComponent {
-  @Input() swatch?: Swatch
+
+  public palette = [{
+    name: 'black',
+    color: "#000"
+  },{
+    name: 'red',
+    color: "#FF0000"
+  }
+  ]
 }

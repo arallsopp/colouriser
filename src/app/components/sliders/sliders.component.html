@@ -1,43 +1,5 @@
-<div>
-  <h2>{{title}}
-    <button type="button" class="btn btn-primary float-end"
-            [class]="title == 'Body' ? 'right-down' : 'left-up'"
-            (click)="copyPalette()">{{sendCaption}}</button></h2>
-</div>
-<div>
-  <mat-list>
-    <mat-list-item>
-      <label>Brightness {{part.brightness}}</label>
-      <mat-slider min="0" max="200" value="100" class="slider" >
-        <input matSliderThumb [(ngModel)]="part.brightness">
-      </mat-slider>
-    </mat-list-item>
-    <mat-list-item>
-      <label>Hue {{part.hue_rotate}}</label>
-      <mat-slider min="0" max="359" value="0" class="slider">
-        <input matSliderThumb [(ngModel)]="part.hue_rotate">
-      </mat-slider>
-    </mat-list-item>
-    <mat-list-item>
-      <label>Saturate {{part.saturation}}</label>
-      <mat-slider min="0" max="400" value="0" class="slider">
-        <input matSliderThumb [(ngModel)]="part.saturation" >
-      </mat-slider>
-    </mat-list-item>
-    <mat-list-item>
-      <label>Contrast {{part.contrast}}</label>
-      <mat-slider min="85" max="200" value="0" class="slider">
-        <input matSliderThumb [(ngModel)]="part.contrast" >
-      </mat-slider>
-    </mat-list-item>
-    <mat-list-item>
-      <label>Opacity {{part.opacity}}</label>
-      <mat-slider min="0" max="100" value="0" class="slider">
-        <input matSliderThumb [(ngModel)]="part.opacity" >
-      </mat-slider>
-    </mat-list-item>
-  </mat-list>
-</div>
+
+
 <mat-form-field>
   <mat-label>Preset</mat-label>
   <mat-select>
