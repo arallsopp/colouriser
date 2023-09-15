@@ -46,7 +46,7 @@
 </div>
 
 
-<app-swatch-picker></app-swatch-picker>
+<app-swatch-picker (changed)="setColor($event)"></app-swatch-picker>
 <hr/>
 <h2>Custom Colours</h2>
 <h3>Body Colour: <input type="color" [(ngModel)]="bodyColour"></h3>

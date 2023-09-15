@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 
 @Component({
@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./swatch-picker.component.css']
 })
 export class SwatchPickerComponent {
+  @Output() changed = new EventEmitter<string>()
+
+  color: string = '#000';
+
+  setPaint(color: string){
+    this.color = color;
+    this.changed.emit(this.color)
+  }
 
   public palette = [{
     name: 'Black',
@@ -52,7 +60,7 @@ export class SwatchPickerComponent {
     color: "#7A2A6F"
   },{
     name: 'Pimento',
-    color: "#8a0e35"
+    color: "#F22917"
   },{
     name: 'Scarlet',
     color: "#9C1C13"

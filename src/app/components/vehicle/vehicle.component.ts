@@ -18,6 +18,13 @@ export class VehicleComponent {
   sheen:number = 0;
   brightness:number = 0;
 
+  setColor(color: string){
+    if(this.sync){
+      this.bodyColour = color;
+      this.roofColour = color;
+      this.getBrightness();
+    }
+  }
   getBrightness():number{
 
     if(this.sync){
