@@ -9,8 +9,8 @@ import { Component } from '@angular/core';
 })
 export class VehicleComponent {
 
-  title = 'colouriser';
-  roofColour = '#DBED64';
-  bodyColour = '#DBED64';
-
+  title:string = 'colouriser';
+  roofColour:string = '#DBED64';
+  bodyColour:string = '#DBED64';
+  sheen:number = 0;
 }

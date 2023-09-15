@@ -16,7 +16,7 @@
   position: absolute;
   mix-blend-mode: screen;
   opacity: 0.3;
-  left: 0;
+  left: 2px;
   top: 0;
   z-index: 3;
 }
