@@ -20,6 +20,10 @@ export class VehicleComponent {
 
   getBrightness():number{
 
+    if(this.sync){
+      this.roofColour = this.bodyColour;
+    }
+
     let components = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(this.bodyColour);
 
     if(components) {

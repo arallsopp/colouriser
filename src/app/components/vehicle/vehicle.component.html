@@ -46,9 +46,11 @@
 </div>
 
 
-
-<input type="color" [(ngModel)]="roofColour">
-<mat-slide-toggle [(ngModel)]="sync">Slide Toggle Checked: {{sync ? 'yes' : 'no'}}</mat-slide-toggle>
-<input type="color" [(ngModel)]="bodyColour">
+<h3>Body Colour: <input type="color" [(ngModel)]="bodyColour"></h3>
+<h3>Sync roof to body: <mat-slide-toggle
+    [(ngModel)]="sync"
+    (click)="getBrightness()"> {{sync ? 'yes' : 'no'}}</mat-slide-toggle>
+</h3>
+<h3 *ngIf="!sync">Body Colour: <input type="color" [(ngModel)]="roofColour"></h3>
 <input type="range" min = "0" max="100" [(ngModel)]="sheen">
 xx {{getBrightness()}} xx
