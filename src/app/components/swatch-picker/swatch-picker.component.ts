@@ -98,7 +98,7 @@ export class SwatchPickerComponent {
     name: 'Java',
     color: "#009E74"
   },{
-    name: 'British Racing Green',
+    name: 'BRG',
     color: "#007955"
   },{
     name: 'French Blue',

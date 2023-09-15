@@ -1,8 +1,4 @@
 import { Component } from '@angular/core';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-
-
-
 
 @Component({
   selector: 'app-vehicle',
@@ -17,15 +13,27 @@ export class VehicleComponent {
   sync:boolean = true;
   sheen:number = 0;
   brightness:number = 0;
+  last:string = 'body';
 
   setColor(color: string){
     if(this.sync){
       this.bodyColour = color;
       this.roofColour = color;
-      this.getBrightness();
+    }else{
+      if (this.last == 'body'){
+        this.bodyColour = color;
+      }else{
+        this.roofColour = color;
+      }
+    }
+  }
+  updateColours():void{
+    if (this.sync){
+      this.roofColour = this.bodyColour;
     }
   }
   getBlendMode():string{
+    /* returns the preferred class for the overlay, basically choosing whether to blend as overlay or not based upon brightness of palette choice.*/
     let components = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(this.bodyColour);
 
     if(components) {

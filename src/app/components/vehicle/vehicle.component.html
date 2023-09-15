@@ -46,18 +46,19 @@
 </div>
 
 <div class="container-fluid mt-2">
+  <div class="row">
   <app-swatch-picker (changed)="setColor($event)"></app-swatch-picker>
-
+  </div>
   <hr/>
   <h2>Custom Colours</h2>
-  <h3>Body Colour: <input type="color" [(ngModel)]="bodyColour"></h3>
+  <div class="row">
+  <h3>Body Colour: <input type="color" [(ngModel)]="bodyColour" (click)="last = 'body'"></h3>
   <h3>Sync roof to body: <mat-slide-toggle
       [(ngModel)]="sync"
-      (click)="getBrightness()"> {{sync ? 'yes' : 'no'}}</mat-slide-toggle>
+      (click)="updateColours()"> {{sync ? 'yes' : 'no'}}</mat-slide-toggle>
   </h3>
-  <h3 *ngIf="!sync">Body Colour: <input type="color" [(ngModel)]="roofColour"></h3>
-
+  <h3 *ngIf="!sync">Roof Colour: <input type="color" [(ngModel)]="roofColour" (click)="last = 'roof'"></h3>
+  </div>
+    Using blend mode: {{getBlendMode()}}
   <p>
-  {{getBrightness()}}
-  </p>
 </div>
