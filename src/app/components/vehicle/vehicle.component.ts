@@ -13,4 +13,32 @@ export class VehicleComponent {
   roofColour:string = '#DBED64';
   bodyColour:string = '#DBED64';
   sheen:number = 0;
+  brightness:number = 0;
+
+  getBrightness():number{
+
+    let components = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(this.bodyColour);
+
+    if(components) {
+      let r = parseInt(components[1], 16);
+      let g = parseInt(components[2], 16);
+      let b = parseInt(components[3], 16);
+
+      this.brightness = Math.sqrt(
+        0.299 * (r * r) +
+        0.587 * (g * g) +
+        0.114 * (b * b)
+      );
+    }else {
+      this.brightness = 0;
+    }
+
+    let cutoff = 128;
+    if(this.brightness < cutoff){
+      this.sheen =((cutoff - this.brightness)/(255-cutoff)) * 33;
+    }else {
+      this.sheen = 0;
+    }
+    return this.brightness;
+  }
 }
