@@ -40,21 +40,24 @@
 	c-2.8-1.2-2.2-3.7,0-3.7s33.8,0.7,44.9,0.7c11.1,0,519.1-7.5,519.1-7.5c0-0.2,4.2-0.5,4,3.8C1865.2,739.8,1861.3,739.7,1861.3,739.7
 	z"/>
   </svg>
-  <img class="shine" src="assets/tr4a/tr4a-sheen-map.png" [style.opacity]="false ? (sheen / 100) : 0.26">
+  <img class="shine" src="assets/tr4a/tr4a-sheen-map.png" [class]="getBlendMode()" [style.opacity]="false ? (sheen / 100) : 0.26">
   <img class="main" src="assets/tr4a/background.jpg">
 
 </div>
 
+<div class="container-fluid mt-2">
+  <app-swatch-picker (changed)="setColor($event)"></app-swatch-picker>
 
-<app-swatch-picker (changed)="setColor($event)"></app-swatch-picker>
-<hr/>
-<h2>Custom Colours</h2>
-<h3>Body Colour: <input type="color" [(ngModel)]="bodyColour"></h3>
-<h3>Sync roof to body: <mat-slide-toggle
-    [(ngModel)]="sync"
-    (click)="getBrightness()"> {{sync ? 'yes' : 'no'}}</mat-slide-toggle>
-</h3>
-<h3 *ngIf="!sync">Body Colour: <input type="color" [(ngModel)]="roofColour"></h3>
-<input type="range" min = "0" max="100" [(ngModel)]="sheen">
-xx {{getBrightness()}} xx
+  <hr/>
+  <h2>Custom Colours</h2>
+  <h3>Body Colour: <input type="color" [(ngModel)]="bodyColour"></h3>
+  <h3>Sync roof to body: <mat-slide-toggle
+      [(ngModel)]="sync"
+      (click)="getBrightness()"> {{sync ? 'yes' : 'no'}}</mat-slide-toggle>
+  </h3>
+  <h3 *ngIf="!sync">Body Colour: <input type="color" [(ngModel)]="roofColour"></h3>
 
+  <p>
+  {{getBrightness()}}
+  </p>
+</div>

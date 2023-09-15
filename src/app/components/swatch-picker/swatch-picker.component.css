@@ -1,7 +1,5 @@
 .swatch{
-  margin:4px 0;
-  display:inline-block;
-  width:20%;
+  cursor:pointer;
 }
 .swatch.active{
   background: black;

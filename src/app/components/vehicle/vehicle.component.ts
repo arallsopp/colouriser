@@ -25,6 +25,25 @@ export class VehicleComponent {
       this.getBrightness();
     }
   }
+  getBlendMode():string{
+    let components = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(this.bodyColour);
+
+    if(components) {
+      let r = parseInt(components[1], 16);
+      let g = parseInt(components[2], 16);
+      let b = parseInt(components[3], 16);
+
+      this.brightness = Math.sqrt(
+        0.299 * (r * r) +
+        0.587 * (g * g) +
+        0.114 * (b * b)
+      );
+    }else {
+      this.brightness = 0;
+    }
+
+    return (this.brightness > 50 ? 'overlay':'screen');
+  }
   getBrightness():number{
 
     if(this.sync){

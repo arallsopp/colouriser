@@ -19,6 +19,9 @@
   top: 0;
   z-index: 3;
 }
+.shine.overlay{
+  mix-blend-mode: overlay;
+}
 
 #mask{
   position: relative;
