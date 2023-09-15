@@ -52,12 +52,20 @@
   <hr/>
   <h2>Custom Colours</h2>
   <div class="row">
-  <h3>Body Colour: <input type="color" [(ngModel)]="bodyColour" (click)="last = 'body'"></h3>
-  <h3>Sync roof to body: <mat-slide-toggle
+    <div class="col-6 col-md-3">
+      Body Colour: <input type="color" [(ngModel)]="bodyColour" (click)="last = 'body'">
+    </div>
+    <div class="col-6 col-md-3"
+         *ngIf="!sync">
+      Roof Colour: <input type="color" [(ngModel)]="roofColour"
+                                                    (click)="last = 'roof'">
+    </div>
+
+    <div class="col-12">Sync roof to body: <mat-slide-toggle
       [(ngModel)]="sync"
       (click)="updateColours()"> {{sync ? 'yes' : 'no'}}</mat-slide-toggle>
-  </h3>
-  <h3 *ngIf="!sync">Roof Colour: <input type="color" [(ngModel)]="roofColour" (click)="last = 'roof'"></h3>
+    </div>
+
   </div>
     Using blend mode: {{getBlendMode()}}
   <p>
