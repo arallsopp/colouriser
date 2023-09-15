@@ -40,7 +40,7 @@ export class SwatchPickerComponent {
     color: "#762315"
   },{
     name: 'Carmine',
-    color: "#C100100"
+    color: "#C10010"
   },{
     name: 'Cherry',
     color: "#8a0e35"
@@ -114,12 +114,6 @@ export class SwatchPickerComponent {
 {
     name: 'Damson',
     color: "#470F1C"
-  },
-{
-    name: 'Royal Blue',
-    color: "#"
-  },
-
-
+  }
   ]
 }

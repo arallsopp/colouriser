@@ -1,7 +1,12 @@
-
+.swatch{
+  margin:4px;
+  display:inline-block;
+  width:20%;
+}
 .thumb{
   display: inline-block;
   width: 45px;
   height: 25px;
   vertical-align: middle;
+  border:2px solid white;
 }
