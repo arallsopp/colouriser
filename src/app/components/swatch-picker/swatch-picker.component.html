@@ -1,7 +1,6 @@
 <div class="picker">
-  <div  *ngFor="let paint of palette">
-  <div class="thumb" [style.background] = "paint.color"></div>
-  {{paint.name}}
+  <div *ngFor="let paint of palette">
+    <span class="thumb" [style.background] = "paint.color"></span> {{paint.name}}
   </div>
 </div>
 
