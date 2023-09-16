@@ -22,7 +22,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { SafePipe} from "./pipes/safe.pipe";
 import { VehicleComponent } from './components/vehicle/vehicle.component';
-import { SlidersComponent } from './components/sliders/sliders.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +29,6 @@ import { SlidersComponent } from './components/sliders/sliders.component';
     SwatchPickerComponent,
     NavigationComponent,
     VehicleComponent,
-    SlidersComponent,
     SafePipe
   ],
   imports: [

@@ -53,15 +53,26 @@
   <h2>Custom Colours</h2>
   <div class="row">
     <div class="col-6 col-md-3">
-      Body Colour: <input type="color" [(ngModel)]="bodyColour" (click)="setActive('body')">
+      <div class="swatch">
+        <input type="color" class="color"  [(ngModel)]="bodyColour" (click)="setActive('body')">
+        <div class="info">
+          <h1>Body</h1>
+          <h2>{{bodyColour}}</h2>
+        </div>
+      </div>
     </div>
-    <div class="col-6 col-md-3"
-         *ngIf="!sync">
-      Roof Colour: <input type="color" [(ngModel)]="roofColour"
-                                                    (click)="setActive('roof')">
+    <div *ngIf="!sync" class="col-6 col-md-3">
+      <div class="swatch">
+        <input type="color" class="color" [(ngModel)]="roofColour" (click)="setActive('roof')">
+        <div class="info">
+          <h1>Roof</h1>
+          <h2>{{roofColour}}</h2>
+        </div>
+      </div>
     </div>
 
-    <div class="col-12">Sync roof to body: <mat-slide-toggle
+
+    <div class="col-12 mt-3">Sync roof to body: <mat-slide-toggle
       [(ngModel)]="sync"
       (click)="updateColours()"> {{sync ? 'yes' : 'no'}}</mat-slide-toggle>
     </div>
