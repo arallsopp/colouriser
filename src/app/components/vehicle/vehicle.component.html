@@ -47,18 +47,18 @@
 
 <div class="container-fluid mt-2">
   <div class="row">
-  <app-swatch-picker (changed)="setColor($event)"></app-swatch-picker>
+  <app-swatch-picker (changed)="setColor($event);updateColours()"></app-swatch-picker>
   </div>
   <hr/>
   <h2>Custom Colours</h2>
   <div class="row">
     <div class="col-6 col-md-3">
-      Body Colour: <input type="color" [(ngModel)]="bodyColour" (click)="last = 'body'">
+      Body Colour: <input type="color" [(ngModel)]="bodyColour" (click)="setActive('body')">
     </div>
     <div class="col-6 col-md-3"
          *ngIf="!sync">
       Roof Colour: <input type="color" [(ngModel)]="roofColour"
-                                                    (click)="last = 'roof'">
+                                                    (click)="setActive('roof')">
     </div>
 
     <div class="col-12">Sync roof to body: <mat-slide-toggle

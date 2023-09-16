@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class VehicleComponent {
 
-  title:string = 'colouriser';
-  roofColour:string = '#DBED64';
-  bodyColour:string = '#DBED64';
+  title:string = 'Colouriser';
+  roofColour:string = '#000000';
+  bodyColour:string = '#000000';
   sync:boolean = true;
   sheen:number = 0;
   brightness:number = 0;
@@ -26,6 +26,11 @@ export class VehicleComponent {
         this.roofColour = color;
       }
     }
+  }
+
+  setActive(component: string){
+    /* tells the palette which component its setting if its not in pair mode */
+    this.last = component;
   }
   updateColours():void{
     if (this.sync){
@@ -52,36 +57,5 @@ export class VehicleComponent {
 
     return (this.brightness > 50 ? 'overlay':'screen');
   }
-  getBrightness():number{
 
-    if(this.sync){
-      this.roofColour = this.bodyColour;
-    }
-
-    let components = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(this.bodyColour);
-
-    if(components) {
-      let r = parseInt(components[1], 16);
-      let g = parseInt(components[2], 16);
-      let b = parseInt(components[3], 16);
-
-      this.brightness = Math.sqrt(
-        0.299 * (r * r) +
-        0.587 * (g * g) +
-        0.114 * (b * b)
-      );
-    }else {
-      this.brightness = 0;
-    }
-
-    if(this.brightness < 128){
-      this.sheen =((128 - this.brightness)/128) * 33;
-    }else {
-      this.sheen = 0.1;
-    }
-    return this.brightness;
-
-    //ideally, we work out if its very saturated, and if it is we set the blend mode to color-dodge instead.
-    //perhaps thats another layer.
-  }
 }
