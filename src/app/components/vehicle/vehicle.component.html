@@ -47,7 +47,13 @@
 
 <div class="container-fluid mt-2">
   <div class="row">
-  <app-swatch-picker (changed)="setColor($event);updateColours()"></app-swatch-picker>
+    <h2 class="col-6">Triumph Colours</h2>
+    <div class="col-6 text-end mt-2">Show: <mat-slide-toggle [(ngModel)]="showPalette"></mat-slide-toggle>
+  </div>
+  <div *ngIf="showPalette">
+    <div class="row mb-4">
+      <app-swatch-picker (changed)="setColor($event);updateColours()"></app-swatch-picker>
+    </div>
   </div>
   <hr/>
   <h2>Custom Colours</h2>
@@ -83,7 +89,8 @@
       (click)="updateColours()"> {{sync ? 'yes' : 'no'}}</mat-slide-toggle>
     </div>
 
+    <p>Using blend mode: {{getBlendMode()}}<p>
+
   </div>
-    Using blend mode: {{getBlendMode()}}
-  <p>
+  </div>
 </div>

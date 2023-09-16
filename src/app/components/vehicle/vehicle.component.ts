@@ -14,6 +14,7 @@ export class VehicleComponent {
   sheen:number = 0;
   brightness:number = 0;
   last:string = 'body';
+  showPalette: boolean = true;
 
   setColor(color: string){
     if(this.sync){
