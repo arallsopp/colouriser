@@ -1,15 +1,14 @@
 .swatch{
   cursor:pointer;
 }
-.swatch.active{
-  background: black;
-}
-.active .thumb {
-}
-.thumb{
+
+.active h1:before {
+  content:'';
   display: inline-block;
-  width: 45px;
-  height: 25px;
-  vertical-align: middle;
-  border: 2px solid white;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: red;
+  margin-right:4px;
 }
+

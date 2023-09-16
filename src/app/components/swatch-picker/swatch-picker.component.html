@@ -1,9 +1,13 @@
-<div class="row gy-2 gx-1">
-  <div class="swatch col-6 col-md-4 col-lg-3"
-       [class]="paint.color == color ? 'active' : ''"
+<div class="row gy-2">
+  <div class="col-6 col-md-3"
        *ngFor="let paint of palette"
        (click)="setPaint(paint.color)">
-    <span class="thumb" [style.background] = "paint.color"></span> {{paint.name}}
+    <div class="swatch" [class]="paint.color == color ? 'active' : ''">
+      <div class="thumb" [style.background] = "paint.color"></div>
+      <div class="info">
+        <h1>{{paint.name}}</h1>
+        <h2>codes</h2>
+      </div>
+    </div>
   </div>
 </div>
-
