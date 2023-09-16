@@ -33,6 +33,7 @@ export class VehicleComponent {
     this.last = component;
   }
   updateColours():void{
+    console.log('updating colours');
     if (this.sync){
       this.roofColour = this.bodyColour;
     }

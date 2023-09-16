@@ -54,7 +54,10 @@
   <div class="row">
     <div class="col-6 col-md-3">
       <div class="swatch">
-        <input type="color" class="color"  [(ngModel)]="bodyColour" (click)="setActive('body')">
+        <input type="color"
+               class="color" [(ngModel)]="bodyColour"
+               (click)="setActive('body')"
+               (change)="updateColours()">
         <div class="info">
           <h1>Body</h1>
           <h2>{{bodyColour}}</h2>
@@ -63,7 +66,10 @@
     </div>
     <div *ngIf="!sync" class="col-6 col-md-3">
       <div class="swatch">
-        <input type="color" class="color" [(ngModel)]="roofColour" (click)="setActive('roof')">
+        <input type="color" class="color"
+               [(ngModel)]="roofColour"
+               (click)="setActive('roof')"
+               (change)="updateColours()">
         <div class="info">
           <h1>Roof</h1>
           <h2>{{roofColour}}</h2>
