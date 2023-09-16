@@ -22,6 +22,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { SafePipe} from "./pipes/safe.pipe";
 import { VehicleComponent } from './components/vehicle/vehicle.component';
+import {MatTabsModule} from "@angular/material/tabs";
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { VehicleComponent } from './components/vehicle/vehicle.component';
     MatIconModule,
     MatListModule,
     MatSelectModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
