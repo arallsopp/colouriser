@@ -90,7 +90,8 @@
         </div>
         <hr/>
         <div class="col-12">
-          Share URL: {{getShareUrl()}} <button class="btn btn-xs btn-outline-danger"
+          Share URL:{{getShareUrl()}}
+        <button mat-raised-button class="btn-xs"
                                                (click)="requestCopy(getShareUrl())">{{buttonCaption}}</button>
         </div>
         <div class="col-12">
