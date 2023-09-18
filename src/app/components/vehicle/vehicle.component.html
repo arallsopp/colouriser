@@ -90,11 +90,11 @@
           <mat-slide-toggle [(ngModel)]="sync"
                             (click)="updateColours()"></mat-slide-toggle>  Sync roof to body
         </div>
+        <hr/>
         <div class="col-12">
-          <button type="button" class="btn btn-primary">Share <i class="bi bi-share"></i></button>
+          Share URL: {{getShareUrl()}} <button class="btn btn-xs btn-outline-danger"
+                                               (click)="requestCopy(getShareUrl())">{{buttonCaption}}</button>
         </div>
-
-
         <div class="col-12">
           Using {{getBlendMode()}} blending
         </div>
