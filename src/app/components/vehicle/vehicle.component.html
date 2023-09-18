@@ -50,10 +50,8 @@
 
   <mat-tab label="Triumph Colours">
     <div class="container-fluid mt-2">
-      <div class="row">
-        <div class="row mb-4">
-          <app-swatch-picker (changed)="setColor($event);updateColours()"></app-swatch-picker>
-        </div>
+      <div class="row mb-4">
+        <app-swatch-picker (changed)="setColor($event);updateColours()"></app-swatch-picker>
       </div>
     </div>
   </mat-tab>
