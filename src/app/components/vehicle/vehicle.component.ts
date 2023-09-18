@@ -1,12 +1,11 @@
-import { Component } from '@angular/core';
-import {MatTabsModule} from '@angular/material/tabs';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-vehicle',
   templateUrl: './vehicle.component.html',
   styleUrls: ['./vehicle.component.css']
 })
-export class VehicleComponent {
+export class VehicleComponent implements OnInit{
 
   title:string = 'Colouriser';
   roofColour:string = '#000000';
@@ -15,7 +14,26 @@ export class VehicleComponent {
   sheen:number = 0;
   brightness:number = 0;
   last:string = 'body';
-  showPalette: boolean = true;
+  activeTabIndex = 0;
+
+  constructor() { }
+
+  ngOnInit() {
+    // get param
+    let urlParams =  new URL(window.location.toLocaleString()).searchParams;
+    if(urlParams.has('b')){
+      this.bodyColour = '#' + <string>urlParams.get('b');
+      this.activeTabIndex = 1;
+    }
+    this.sync = !urlParams.has('r');
+
+    if(this.sync) {
+      this.activeTabIndex = 1;
+      this.roofColour = this.bodyColour;
+    }else{
+      this.roofColour = '#' + <string>urlParams.get('r');
+    }
+  }
 
   setColor(color: string){
     if(this.sync){

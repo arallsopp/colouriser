@@ -44,7 +44,9 @@
   <img class="main" src="assets/tr4a/background.jpg">
 </div>
 
-<mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+<mat-tab-group mat-stretch-tabs="false"
+               [(selectedIndex)]="activeTabIndex">
+               mat-align-tabs="start">
 
   <mat-tab label="Triumph Colours">
     <div class="container-fluid mt-2">
