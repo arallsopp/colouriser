@@ -58,9 +58,9 @@
     </div>
   </mat-tab>
 
-  <mat-tab label="Custom">
+  <mat-tab label="Advanced">
     <div class="container-fluid mt-2">
-      <div class="row">
+      <div class="row gy-2">
         <div class="col-6 col-md-3">
           <div class="swatch">
             <input type="color"
@@ -86,13 +86,18 @@
           </div>
         </div>
 
-
-        <div class="col-12 mt-3">Sync roof to body: <mat-slide-toggle
-          [(ngModel)]="sync"
-          (click)="updateColours()"> {{sync ? 'yes' : 'no'}}</mat-slide-toggle>
+        <div class="col-12">
+          <mat-slide-toggle [(ngModel)]="sync"
+                            (click)="updateColours()"></mat-slide-toggle>  Sync roof to body
+        </div>
+        <div class="col-12">
+          <button type="button" class="btn btn-primary">Share <i class="bi bi-share"></i></button>
         </div>
 
-        <p>Using blend mode: {{getBlendMode()}}</p>
+
+        <div class="col-12">
+          Using {{getBlendMode()}} blending
+        </div>
       </div>
     </div>
   </mat-tab>
