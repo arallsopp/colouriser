@@ -54,6 +54,7 @@ export class VehicleComponent implements OnInit{
   setActive(component: string){
     /* tells the palette which component its setting if its not in pair mode */
     this.last = component;
+    console.log("set active to ", component);
   }
   updateColours():void{
     console.log('updating colours');
